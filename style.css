@@ -939,24 +939,27 @@ body > footer > div p {
         align-items: center;
     }
     
-    footer {
-        padding: 60px 20px 40px 20px;
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+body > footer {
+    padding: 60px 20px 40px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    width: 100%;
+    max-width: 100%;
+}
     
-    footer section[aria-label="Sobre FYMA CCTV"] {
-        grid-column: auto;
-    }
+   body > footer section[aria-label="Sobre FYMA CCTV"] {
+    grid-column: auto;
+}
     
-    footer h3 {
-        margin-bottom: 16px;
-    }
+    body > footer h3 {
+    margin-bottom: 16px;
+}
     
-    footer > div p {
-        display: block;
-        margin: 10px 0;
-    }
+    body > footer > div p {
+    display: block;
+    margin: 10px 0;
+}
 }
 
 /* ==========================================
