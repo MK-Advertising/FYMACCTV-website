@@ -301,12 +301,12 @@ body > header > div a[role="button"]:last-child:active,
 
 /* Eyebrow - Apple & OpenAI Inspired style */
 #inicio > div p:first-of-type {
-    font-size: 1.6rem;
-    font-weight: 590;
+    font-size: 2.7rem;
+    font-weight: 990;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--orange-fyma);
-    margin-bottom: 15px;
+    margin-bottom: -5px;
 }
 
 /* Massive Headline */
@@ -863,12 +863,12 @@ body > footer > div p {
     }
     
     #inicio > div p:first-of-type {
-        font-size: 0.8rem;
+        font-size: 1.8rem;
     }
 
     #inicio h1 {
         font-size: 2.25rem;
-        letter-spacing: -0.03em;
+        letter-spacing: 0.05em;
     }
     
     #inicio > div p:last-of-type {
@@ -1002,4 +1002,3 @@ body > footer {
     }
 
 }
-
