@@ -1,41 +1,34 @@
 /* ==========================================================================
    FYMA CCTV - CORPORATE TECH PREMIUM STYLESHEET (V3 FINAL)
    Inspiración: Apple, OpenAI, Stripe, Huawei Enterprise
-   Aesthetics: High-contrast dark theme, generous whitespace, sharp typography.
    ========================================================================== */
 
-/* 1. IMPORTACIÓN DE FUENTES DEL SISTEMA */
+/* 1. IMPORTS & SYSTEM FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap');
 
-/* 2. TOKENS DE DISEÑO (VARIABLES CSS) */
+/* 2. DESIGN TOKENS (CSS VARIABLES) */
 :root {
-    /* Paleta de Colores */
     --primary-black: #121212;
     --graphite-gray: #1E1E1E;
     --soft-white: #F5F5F5;
     --orange-fyma: #D97706;
     --technical-blue: #14213D;
     
-    /* Colores Funcionales */
     --pure-white: #FFFFFF;
     --border-light: rgba(255, 255, 255, 0.08);
     --border-hover: rgba(217, 119, 6, 0.4);
     --text-muted: #8E8E93;
     --overlay-dark: rgba(18, 18, 18, 0.75);
     
-    /* Tipografías */
     --font-titles: 'Sora', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     
-    /* Transiciones de Animación */
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    
-    /* Constantes de Maquetación */
     --max-width-content: 1200px;
 }
 
-/* 3. RESETEO GLOBAL Y ESTILOS BASE */
+/* 3. GLOBAL RESET & BASE STYLES */
 * {
     margin: 0;
     padding: 0;
@@ -80,7 +73,6 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-/* Encabezados Comunes de Sección */
 section > header {
     text-align: center;
     max-width: 750px;
@@ -97,11 +89,11 @@ section > header h2 {
 section > header p {
     font-size: 1.125rem;
     color: var(--text-muted);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.7;
 }
 
-/* 4. HEADER Y NAV (Sticky Glassmorphism Premium) */
+/* 4. HEADER & NAV (Sticky Premium Glassmorphism) */
 body > header {
     position: fixed;
     top: 0;
@@ -137,7 +129,6 @@ body > header .logo-wrapper a:hover img {
     transform: scale(0.98);
 }
 
-/* Botón Comentarios */
 .btn-comentarios {
     font-family: var(--font-titles);
     font-size: 0.8rem;
@@ -229,7 +220,7 @@ body > header nav > ul > li:hover ul {
     visibility: visible;
 }
 
-/* ENCAPSULADO CRUCIAL: Previene el desfase a la izquierda del submenú en móviles */
+/* Encapsulado de la transición hover de escritorio */
 @media (min-width: 901px) {
     body > header nav > ul > li:hover ul {
         transform: translateX(-50%) translateY(5px);
@@ -257,12 +248,12 @@ body > header nav > ul > li ul li a:hover {
     padding-left: 18px;
 }
 
-/* Oculto por defecto en la versión de escritorio */
+/* Oculto por defecto en escritorio */
 .mobile-only-item {
     display: none;
 }
 
-/* Acciones en el Header (Escritorio) */
+/* Contenedor de acciones del header en escritorio */
 .header-actions-wrapper {
     display: flex;
     align-items: center;
@@ -291,7 +282,6 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     box-shadow: 0 8px 25px rgba(217, 119, 6, 0.35);
 }
 
-/* Botones Comunes de Acción */
 .btn-primary {
     font-family: var(--font-titles);
     font-size: 0.85rem;
@@ -325,7 +315,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     border-color: var(--soft-white);
 }
 
-/* Control del Menú de Hamburguesa por CSS */
+/* Control del Menú Hamburguesa */
 .menu-checkbox {
     display: none;
 }
@@ -437,7 +427,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     height: 24px;
 }
 
-/* 6. SECCIÓN 2: PROBLEMAS QUE RESOLVEMOS (Glassmorphism de alta fidelidad) */
+/* 6. SECCIÓN 2: PROBLEMAS QUE RESOLVEMOS (Glassmorphism esmerilado premium) */
 #problemas-resolvemos {
     padding: 160px 80px;
     background: 
@@ -456,7 +446,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
 }
 
 .problem-card {
-    background-color: rgba(255, 255, 255, 0.03); /* Fondo translúcido sutil */
+    background-color: rgba(255, 255, 255, 0.03); /* Cristal esmerilado ultra-transparente */
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -464,12 +454,8 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     padding: 48px;
     box-shadow: 
         0 10px 40px -10px rgba(0, 0, 0, 0.5), 
-        inset 0 1px 0px rgba(255, 255, 255, 0.15); /* Reflejo superior del cristal */
-    transition: 
-        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-        border-color 0.4s, 
-        background-color 0.4s, 
-        box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        inset 0 1px 0px rgba(255, 255, 255, 0.15);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, background-color 0.4s, box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .problem-card:hover {
@@ -478,7 +464,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     transform: translateY(-8px) scale(1.005);
     box-shadow: 
         0 25px 50px -12px rgba(0, 0, 0, 0.7), 
-        0 0 30px rgba(217, 119, 6, 0.15), /* Resplandor naranja difuso */
+        0 0 30px rgba(217, 119, 6, 0.15),
         inset 0 1px 0px rgba(255, 255, 255, 0.25);
 }
 
@@ -496,7 +482,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     color: var(--soft-white);
 }
 
-/* 7. SECCIÓN 3: SLIDER HORIZONTAL (Nuestras Soluciones) */
+/* 7. SECCIÓN 3: SLIDER HORIZONTAL */
 #que-necesitas-proteger {
     padding: 160px 80px;
     background-color: #161616;
@@ -581,11 +567,11 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     color: var(--pure-white);
 }
 
-/* 8. SECCIÓN 4: CONTROL OPERATIVO (Sección Diferenciadora) */
+/* 8. SECCIÓN 4: CONTROL OPERATIVO */
 #control-operativo {
     padding: 160px 80px;
     background-image: linear-gradient(135deg, rgba(18, 18, 18, 0.94) 0%, rgba(20, 33, 61, 0.88) 100%),
-    url('Assets/img/monitoreo-remoto-cdmx-fyma-cctv.jpeg');
+    url('https://i.pinimg.com/1200x/2e/cd/b0/2ecdb0aa35fc13487e1219edf4354903.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -624,7 +610,6 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     gap: 20px;
 }
 
-/* Tarjetas de Casos de Uso (Glassmorphism ultra-transparente corregido) */
 .case-card {
     background-color: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(25px) saturate(180%);
@@ -729,7 +714,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
     margin-bottom: 16px;
 }
 
-/* 11. SECCIÓN 7: TESTIMONIOS (Reseñas Verificadas de Clientes) */
+/* 11. SECCIÓN 7: TESTIMONIOS */
 #opiniones-clientes {
     padding: 160px 80px;
     background-color: var(--primary-black);
@@ -875,7 +860,7 @@ body > footer section[aria-label="Sobre FYMA CCTV"] {
 
 /* === AJUSTE DEL TAMAÑO DEL LOGO EN EL FOOTER === */
 body > footer section[aria-label="Sobre FYMA CCTV"] img { 
-    height: 43px; /* MODIFICA ESTE VALOR (ej. 32px, 40px, 48px, 60px) PARA CAMBIAR EL TAMAÑO DEL LOGO */
+    height: 48px; /* MODIFICA ESTE VALOR (ej. 32px, 40px, 48px, 60px) PARA CAMBIAR EL TAMAÑO DEL LOGO */
     width: auto; 
     align-self: flex-start;
 }
@@ -1065,9 +1050,32 @@ body > footer > div hr { border: 0; height: 1px; background-color: var(--border-
     #que-necesitas-proteger div[role="region"] article { flex: 0 0 calc(50% - 16px); }
     .problems-grid { grid-template-columns: 1fr; gap: 24px; }
     .steps-timeline { grid-template-columns: repeat(2, 1fr); }
+
+    /* === CENTRADO DE LA SECCIÓN DIFERENCIADORA EN MÓVILES === */
+    #control-operativo .control-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #control-operativo .control-content h2,
+    #control-operativo .control-content p {
+        text-align: center;
+    }
+
+    #control-operativo .control-content a.btn-primary {
+        align-self: center;
+        margin-bottom: 24px;
+    }
+
+    #control-operativo .control-cases {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
-/* OCULTACIÓN EFICIENTE DE LA BARRA DE DESPLAZAMIENTO EN CELULARES */
+/* OCULTACIÓN EFICIENTE DE LA BARRA DE DESPLAZAMIENTO EN CELULARES (Evita barra blanca horizontal) */
 @media (max-width: 768px) {
     #opiniones-clientes div[role="region"] {
         display: flex;
