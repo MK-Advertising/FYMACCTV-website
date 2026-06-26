@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FYMA CCTV</title>
+    <title>FYMA CCTV - Sistemas de Videovigilancia y Monitoreo Especializado • CDMX</title>
     <link rel="icon" type="image/x-icon" href="Assets/Logos/FYMA-CCTV_favicon-48x48.ico">
+    
+    <!-- Vinculación de la hoja de estilos externa -->
     <link rel="stylesheet" href="style.css">
     
     <!-- Meta SEO Optimizado -->
-    <meta name="description" content="Especialistas en soluciones de videovigilancia, CCTV y cámaras de seguridad para negocios y hogares en CDMX y Área Metropolitana. Asesoría especializada y atención personalizada. Instalación, mantenimiento y venta de cáaras de seguridad y equipo de CCTV para instaladores">
-    <meta name="keywords" content="Cámaras de Seguridad, CCTV, Videovigilancia, Cámaras de seguridad CDMX, CCTV CDMX, Videovigilancia CDMX, Seguridad para negocios, Seguridad para casas cámaras de seguridad para celular, cámaras conectadas al celular, cámaras de seguridad wifi, cámaras wifi para negocio, cámaras con monitoreo remoto, cámaras para ver desde celular, cámaras de vigilancia wifi, cámaras de seguridad con app, monitoreo desde celular, cámaras de seguridad inteligentes">
+    <meta name="description" content="Instalamos sistemas de videovigilancia y ofrecemos monitoreo especializado en CDMX y Área Metropolitana. Protege y supervisa tu negocio o hogar desde cualquier lugar con asesoría y atención personalizada.">
+    <meta name="keywords" content="Cámaras de Seguridad, CCTV, Videovigilancia, Cámaras de seguridad CDMX, CCTV CDMX, Videovigilancia CDMX, Seguridad para negocios, Seguridad para casas, monitoreo remoto, supervisión operativa, robo hormiga">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.fymacctv.com/">
 
     <!-- Open Graph (Redes Sociales) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="FYMA CCTV - Soluciones de Videovigilancia para tu negocio o casa">
-    <meta property="og:description" content="Ayudamos a proteger tu negocio o casa mediante soluciones de videovigilancia, CCTV y cámaras de seguridad confiables. Cobertura en CDMX y Área Metropolitana.">
+    <meta property="og:title" content="FYMA CCTV - Protege y supervisa tu negocio o casa desde cualquier lugar">
+    <meta property="og:description" content="Sistemas de videovigilancia avanzados y monitoreo de control operativo en CDMX y Área Metropolitana. Asesoría técnica inmediata.">
     <meta property="og:url" content="https://www.fymacctv.com/">
-    <meta property="og:image" content="https://www.fymacctv.com/">
+    <meta property="og:image" content="https://www.fymacctv.com/Assets/Logos/FYMA-CCTV_logo-navbar_website.png">
 
     <!-- Schema Organization -->
     <script type="application/ld+json">
@@ -27,7 +29,7 @@
       "@type": "Organization",
       "name": "FYMA CCTV",
       "url": "https://www.fymacctv.com/",
-      "logo": "https://www.fymacctv.com/logo.png",
+      "logo": "https://www.fymacctv.com/Assets/Logos/FYMA-CCTV_logo-navbar_website.png",
       "sameAs": [
         "https://www.facebook.com/profile.php?id=100067073892114",
         "https://www.instagram.com/fyma_cctv/"
@@ -41,16 +43,15 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "FYMA CCTV",
-      "image": "https://www.fymacctv.com/logo.png",
+      "image": "https://www.fymacctv.com/Assets/Logos/FYMA-CCTV_logo-navbar_website.png",
       "telephone": "+525552751350",
-      "email":  "comercializadorafyma@gmail.com",
+      "email": "comercializadorafyma@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Ciudad de México",
         "addressRegion": "CDMX",
         "addressCountry": "MX"
       },
-      
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "CDMX y Área Metropolitana"
@@ -62,17 +63,29 @@
 
     <!-- HEADER (Sticky Header) -->
     <header>
-        <a href="#inicio" aria-label="FYMA CCTV Inicio">
-            <!-- Representación del Logo de FYMA -->
-            <img  src="Assets/Logos/FYMA-CCTV_logo-navbar_website.png"
-        alt="FYMA CCTV - cámaras de seguridad">
-        </a>
+        <div class="logo-wrapper">
+            <a href="#inicio" aria-label="FYMA CCTV Inicio">
+                <img src="Assets/Logos/FYMA-CCTV_logo-navbar_website.png" alt="FYMA CCTV">
+            </a>
+            <a href="#opiniones-clientes" class="btn-comentarios">Comentarios</a>
+        </div>
         
+        <!-- CONTROL DEL MENÚ POR CHECKBOX NATIVO -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <!-- BOTÓN GEOMÉTRICO HAMBURGUESA -->
+        <label for="menu-toggle" class="hamburger-label" aria-label="Abrir menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- NAVEGACIÓN PRINCIPAL OVERLAY -->
         <nav aria-label="Menú principal">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li>
-                    <a href="#que-necesitas-proteger" aria-haspopup="true" aria-expanded="false">Soluciones </a>
+                <li class="has-submenu">
+                    <a href="#que-necesitas-proteger" class="submenu-trigger" aria-haspopup="true" aria-expanded="false">Soluciones <span class="menu-arrow">▼</span></a>
                     <!-- Dropdown Soluciones -->
                     <ul>
                         <li><a href="soluciones/seguridad-para-negocios/index.html">Seguridad para Negocios</a></li>
@@ -83,294 +96,466 @@
                 </li>
                 <li><a href="nosotros/index.html">Nosotros</a></li>
                 <li><a href="contacto/index.html">Contacto</a></li>
+                <!-- Botón exclusivo para la versión móvil dentro de la hamburguesa -->
+                <li class="mobile-only-item">
+                    <a href="portal-instaladores/index.html" class="btn-portal-mobile" role="button">Portal Instaladores</a>
+                </li>
             </ul>
         </nav>
 
-        <div>
-            <!-- Botón Secundario (Preparado para futura redirección al portal B2B) -->
+        <!-- Botón de escritorio en el wrapper de acciones del header -->
+        <div class="header-actions-wrapper">
             <a href="portal-instaladores/index.html" role="button">Portal Instaladores</a>
-            <!-- CTA Principal -->
-            <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20una%20soluci%C3%B3n%20de%20videovigilancia%20para%20mi%20hogar%20o%20negocio." target="_blank" rel="noopener noreferrer" role="button">
-                Solicitar Asesoría
-            </a>
         </div>
     </header>
 
     <main>
 
-        <!-- HERO SECTION -->
+        <!-- 1. HERO SECTION -->
         <section id="inicio" aria-label="Presentación">
-            <!-- Video Fullscreen de Fondo sin audio -->
-            <video 
-                autoplay
-                loop
-                muted
-                playsinline
-                webkit-playsinline
-                preload="auto"
-                aria-hidden="true">
-                <!-- Escenas representadas en el video source placeholder o tracks -->
+            <video autoplay loop muted playsinline webkit-playsinline preload="auto" aria-hidden="true">
                 <source src="Assets/videos/Loop-hero-Homepage.mp4" type="video/mp4">
             </video>
 
-            <!-- Contenido del Hero con overlay de lectura -->
-            <div>
-                <p>FYMA CCTV</p>
+            <div class="hero-container">
+                <p class="hero-eyebrow">FYMA CCTV</p>
                 <h1>Tu aliado en videovigilancia</h1>
-                <p>Te ayudamos a proteger lo que más te importa: tu empresa u hogar, con soluciones de videovigilancia para brindarte seguridad, control y tranquilidad, al mejor costo y mayor calidad.</p>
+                <p class="hero-subtitle">Te ayudamos a proteger lo que más te importa: tu empresa u hogar, con soluciones de videovigilancia para brindarte seguridad, control y tranquilidad, al mejor costo y mayor calidad.</p>
                 
-                <!-- CTA Hero con Icono WhatsApp integrado semánticamente -->
-                <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20una%20soluci%C3%B3n%20de%20videovigilancia%20para%20mi%20hogar%20o%20negocio." target="_blank" rel="noopener noreferrer" role="button">
-                    <img src="Assets/Logos/Logo Whats.svg" alt="" aria-hidden="true"> Solicitar Asesoría
-                </a>
+                <div class="hero-actions">
+                    <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20una%20soluci%C3%B3n%20de%20videovigilancia%20para%20mi%20hogar%20o%20negocio." class="btn-primary" target="_blank" rel="noopener noreferrer" role="button">
+                        <img src="Assets/Logos/Logo Whats.svg" alt="" aria-hidden="true"> Solicitar Asesoría
+                    </a>
+                    <a href="#que-necesitas-proteger" class="btn-secondary" role="button">
+                        Ver Soluciones
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 2: ¿Qué necesitas proteger? -->
-        <section id="que-necesitas-proteger">
+        <!-- 2. PROBLEMAS QUE RESOLVEMOS -->
+        <section id="problemas-resolvemos">
             <header>
-                <h2>¿Qué necesitas proteger?</h2>
-                <p>Te ayudamos a implementar soluciones de videovigilancia adaptadas a tus necesidades.</p>
+                <h2>¿Qué te preocupa hoy?</h2>
             </header>
 
-            <!-- Slider horizontal (Estructurado como grupo de artículos en carrusel) -->
-            <div role="region" aria-label="Carrusel de necesidades de protección">
-                
-                <!-- Tarjeta 1 -->
+            <div class="problems-grid">
+                <article class="problem-card">
+                    <h3>Tu Negocio</h3>
+                    <ul class="problem-list" style="display: flex; flex-direction: column; gap: 18px;">
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                <circle cx="12" cy="16" r="1"></circle>
+                            </svg>
+                            <span>Robo hormiga de mercancía o insumos.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <line x1="1" y1="1" x2="23" y2="23" style="stroke: var(--text-muted); opacity: 0.7;"></line>
+                            </svg>
+                            <span>Falta de supervisión constante de las sucursales.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span>Incidentes, reclamos y malentendidos con empleados.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10" style="stroke: var(--text-muted); stroke-dasharray: 2,2;"></path>
+                            </svg>
+                            <span>Aperturas y cierres fuera de protocolo.</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="problem-card">
+                    <h3>Tu Hogar</h3>
+                    <ul class="problem-list" style="display: flex; flex-direction: column; gap: 18px;">
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                            <span>Protección y seguridad constante de tu familia.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                <path d="M9 17V7l7 5-7 5z"></path>
+                            </svg>
+                            <span>Falta de vigilancia en accesos, portones y cocheras.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                <path d="M12 6a3 3 0 1 1 0 6" style="stroke: var(--text-muted);"></path>
+                            </svg>
+                            <span>Incertidumbre y desvelo cuando te encuentras fuera.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 14px;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 3px;">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2 2z"></path>
+                                <circle cx="12" cy="13" r="4"></circle>
+                            </svg>
+                            <span>Falta de evidencia visual confiable ante incidentes.</span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. NUESTRA SOLUCIÓN -->
+        <section id="que-necesitas-proteger">
+            <header>
+                <h2>Más que cámaras de seguridad</h2>
+                <p>Diseñamos soluciones de seguridad para que puedas supervisar, proteger y controlar tu empresa u hogar desde cualquier lugar y en cualquier momento.</p>
+            </header>
+
+            <div role="region" aria-label="Nuestras soluciones de supervisión">
                 <article id="seguridad-negocios">
-                    <img src="Assets/img/cámaras-de-seguridad-para-negocio.webp" alt="Supervisión en mi negocio">
+                    <img src="Assets/img/cámaras-de-seguridad-para-negocio.webp" alt="Videovigilancia para negocios">
                     <h3>Mi Negocio</h3>
                     <p>Protege tu negocio, personal, inventario y operaciones mediante cámaras de seguridad adaptadas a tus necesidades.</p>
                     <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20c%C3%A1maras%20de%20seguridad%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer" role="button">
-                        Asesoría para mi negocio
+                        Quiero vigilar mi negocio
                     </a>
                 </article>
 
-                <!-- Tarjeta 2 -->
                 <article id="seguridad-casas">
-                    <img src="Assets/img/cámaras-de-seguridad-para-casa.webp" alt="Seguridad en mi casa">
+                    <img src="Assets/img/cámaras-de-seguridad-para-casa.webp" alt="Seguridad residencial">
                     <h3>Mi Casa</h3>
                     <p>Protege a tu familia, tu patrimonio y mantente al tanto de lo que sucede en tu hogar desde cualquier lugar.</p>
                     <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20c%C3%A1maras%20de%20seguridad%20para%20mi%20casa." target="_blank" rel="noopener noreferrer" role="button">
-                        Asesoría para mi casa
+                        Quiero vigilar mi casa
                     </a>
                 </article>
 
-                <!-- Tarjeta 3 -->
                 <article id="mi-soporte">
-                    <img src="Assets/img/mantenimiento-de-cctv.webp" alt="mantenimiento de camaras de seguridad">
+                    <img src="Assets/img/mantenimiento-de-cctv.webp" alt="mantenimiento de cctv">
                     <h3>Mi Soporte</h3>
-                    <p>Mantén tus cámaras, grabadores y sistema de videovigilancia en óptimas condiciones mediante mantenimiento preventivo y correctivo.</p>
+                    <p>Mantén tus cámaras, grabadores y sistema de videovigilancia en óptimas condiciones mediante mantenimiento.</p>
                     <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20mejorar%20el%20control%20y%20supervisi%C3%B3n%20de%20mi%20operaci%C3%B3n." target="_blank" rel="noopener noreferrer" role="button">
                         Necesito mantenimiento
                     </a>
                 </article>
 
-                <!-- Tarjeta 4 -->
                 <article id="monitoreo-especializado">
-                    <img src="Assets/img/monitoreo-remoto.webp" alt="Tranquilidad con monitoreo continuo">
+                    <img src="Assets/img/monitoreo-remoto.webp" alt="Monitoreo remoto PyME">
                     <h3>Monitoreo Remoto para PyMEs</h3>
                     <p>Un equipo de monitoristas supervisa tus cámaras de seguridad en tiempo real para ayudarte a detectar incidentes, supervisar operaciones y mantener el control de tu negocio.</p>
                     <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20para%20implementar%20una%20soluci%C3%B3n%20que%20me%20brinde%20mayor%20tranquilidad%20y%20supervisi%C3%B3n." target="_blank" rel="noopener noreferrer" role="button">
                         Quiero supervisión especializada
                     </a>
                 </article>
-
             </div>
         </section>
 
-        <!-- SECCIÓN 3: ¿Por qué elegir FYMA CCTV? -->
-        <section id="por-que-elegir-fyma">
+        <!-- 4. SECCIÓN DIFERENCIADORA -->
+        <section id="control-operativo">
+            <div class="control-wrapper">
+                <div class="control-content">
+                    <h2>Convierte tus cámaras en una herramienta de control operativo</h2>
+                    <p>Nuestro equipo puede supervisar actividades específicas mediante CCTV para ayudarte a detectar incidencias, validar procesos y generar evidencia para la toma de decisiones.</p>
+                    
+                    <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20Monitoreo%20Especializado%20y%20Supervisi%C3%B3n%20de%20Operaciones." class="btn-primary" target="_blank" rel="noopener noreferrer">
+                        Conocer Monitoreo Remoto
+                    </a>
+                </div>
+                <div class="control-cases">
+                    <div class="case-card">Robo hormiga</div>
+                    <div class="case-card">Atención al cliente</div>
+                    <div class="case-card">Captura de KPIs</div>
+                    <div class="case-card">Validación de procesos</div>
+                    <div class="case-card">Control de sucursales</div>
+                    <div class="case-card">Investigación de incidentes</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SECTORES QUE ATENDEMOS -->
+        <section id="sectores-atendemos">
             <header>
-                <h2>¿Por qué elegir FYMA CCTV?</h2>
-                <p>Más que instalar cámaras de seguridad, nos enfocamos en ayudarte a proteger lo que más valoras mediante asesoría especializada, atención cercana y soluciones adaptadas a tus necesidades.</p>
+                <h2>Soluciones para diferentes tipos de negocio</h2>
+                <p>+11 años trabajando con diversos negocios:</p>
             </header>
 
-            <!-- Diferenciadores -->
-            <div>
-                <article>
-                    <h3>Más de 10 años generando confianza</h3>
-                    <p> Nuestra experiencia en proyectos de videovigilancia para negocios y hogares nos permite entender distintos escenarios y recomendar soluciones confiables para cada necesidad.</p>
-                </article>
+            <div class="sectores-grid">
+                <div class="sector-badge">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 4px auto;">
+                        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                        <path d="M7 2v20"></path>
+                        <path d="M21 15V2v0a5 5 0 0 0-5 5v3c0 1.5 1 2.5 2 3h3zm0 0v7"></path>
+                    </svg>
+                    <span>Restaurantes</span>
+                </div>
 
-                <article id="mantenimiento-soporte">
-                    <h3>Entendemos antes de recomendar</h3>
-                    <p>Nos tomamos el tiempo para conocer tus necesidades antes de proponer una solución, asegurando que recibas una recomendación adecuada para tu entorno y objetivos.</p>
-                </article>
+                <div class="sector-badge">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 4px auto;">
+                        <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+                        <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+                        <line x1="6" y1="2" x2="6" y2="4"></line>
+                        <line x1="10" y1="2" x2="10" y2="4"></line>
+                        <line x1="14" y1="2" x2="14" y2="4"></line>
+                    </svg>
+                    <span>Cafeterías</span>
+                </div>
 
-                <article>
-                    <h3>Instalaciones limpias y profesionales</h3>
-                    <p>Cuidamos cada detalle para entregar sistemas funcionales, ordenados y preparados para el uso diario.</p>
-                </article>
+                <div class="sector-badge">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 4px auto;">
+                        <circle cx="6" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+                        <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+                        <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+                    </svg>
+                    <span>Barberías</span>
+                </div>
 
-                <article>
-                    <h3>Acompañamiento Posventa</h3>
-                    <p>Nuestro compromiso no termina al finalizar el proyecto. Te brindamos orientación y soporte para ayudarte a mantener tu sistema funcionando correctamente.</p>
-                </article>
+                <div class="sector-badge">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 4px auto;">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span>Tiendas y Minisúpers</span>
+                </div>
 
-                <article>
-                    <h3>Supervisión y análisis para proyectos</h3>
-                    <p>Además de la videovigilancia tradicional, ofrecemos servicios especializados de supervisión y análisis de eventos para fortalecer el control operativo y la toma de decisiones.</p>
-                </article>
+                <div class="sector-badge">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 4px auto;">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    <span>Oficinas</span>
+                </div>
+
+                <div class="sector-badge">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--orange-fyma)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 4px auto;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 8v8M8 12h8"></path>
+                    </svg>
+                    <span>Consultorios</span>
+                </div>
             </div>
-
-            <!-- Cierre visual -->
-            <aside>
-                <blockquote>
-                    <p>No solo instalamos cámaras de seguridad.</p>
-                    <cite>Ayudamos a empresas y hogares a operar con mayor control, seguridad y tranquilidad.</cite>
-                </blockquote>
-            </aside>
         </section>
 
-        <!-- SECCIÓN 4: Opiniones de Clientes -->
+        <!-- 6. CÓMO TRABAJAMOS -->
+        <section id="como-trabajamos">
+            <header>
+                <h2>Empieza a monitorear tu negocio en 5 sencillos pasos</h2>
+            </header>
+
+            <div class="steps-timeline">
+                <div class="timeline-step">
+                    <span class="step-num">01</span>
+                    <h3>Solicita una asesoría</h3>
+                    <p>Mándanos Whats para brindarte una plática técnica sin costo.</p>
+                </div>
+                <div class="timeline-step">
+                    <span class="step-num">02</span>
+                    <h3>Evaluamos tu equipo</h3>
+                    <p>Verificamos que todo esté listo para comenzar el monitoreo.</p>
+                </div>
+                <div class="timeline-step">
+                    <span class="step-num">03</span>
+                    <h3>Activamos el servicio</h3>
+                    <p>Tu negocio queda conectado con nuestro centro de monitoreo.</p>
+                </div>
+                <div class="timeline-step">
+                    <span class="step-num">04</span>
+                    <h3>Vigilamos tu operación</h3>
+                    <p>Nuestro equipo supervisa las cámaras en tiempo real.</p>
+                </div>
+                <div class="timeline-step">
+                    <span class="step-num">05</span>
+                    <h3>Te mantenemos informado</h3>
+                    <p>Recibes alertas, reportes y evidencia cuando ocurre un incidente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. TESTIMONIOS -->
         <section id="opiniones-clientes">
             <header>
-                <h2>La confianza se construye con resultados.</h2>
-                <p>Conoce algunas de las opiniones compartidas por clientes que han confiado en FYMA CCTV.</p>
-              <div class="reviews-summary">
-    <span>⭐⭐⭐⭐⭐</span>
-    <strong>4.8/5 basado en 24 opiniones verificadas</strong>
-</div>
+                <h2>Personas que ya confían en FYMA CCTV</h2>
+                <p>La confianza se construye con resultados verificables en campo.</p>
+                <div class="reviews-summary">
+                    <span>⭐⭐⭐⭐⭐</span>
+                    <strong>4.8/5 basado en 24 opiniones verificadas</strong>
+                </div>
             </header>
 
-            <!-- Carrusel de reseñas Google (Representación semántica de los elementos requeridos por tarjeta) -->
-<div role="region" aria-label="Reseñas de Google Business">
+            <div role="region" aria-label="Reseñas de Google Business">
+                <!-- Reseña 1 -->
+                <article>
+                    <header>
+                        <h3>Erika Horta</h3>
+                        <div aria-label="Calificación: 5 estrellas de 5">
+                            <span>★★★★★</span>
+                        </div>
+                    </header>
+                    <p>Gran servicio y precio justo. Muy recomendable.</p>
+                    <footer>
+                        <span class="review-date">Hace 4 semanas</span>
+                    </footer>
+                </article>
 
-    <article>
-        <header>
-            <h3>Erika Horta</h3>
-            <div aria-label="Calificación: 5 estrellas de 5">
-                <span>★★★★★</span>
+                <!-- Reseña 2 -->
+                <article>
+                    <header>
+                        <h3>Tlaquepaque Ind</h3>
+                        <div aria-label="Calificación: 5 estrellas de 5">
+                            <span>★★★★★</span>
+                        </div>
+                    </header>
+                    <p>Muy buena atención, responsables, confiables y limpios en su trabajo. Resolvieron todas mis dudas and sin duda volvería a elegirlos para futuros proyectos.</p>
+                    <footer>
+                        <span class="review-date">Hace un mes</span>
+                    </footer>
+                </article>
+
+                <!-- Reseña 3 -->
+                <article>
+                    <header>
+                        <h3>Gero</h3>
+                        <div aria-label="Calificación: 5 estrellas de 5">
+                            <span>★★★★★</span>
+                        </div>
+                    </header>
+                    <p>Excelente trabajo en la instalación de cámaras de seguridad. Destacó la asesoría previa, la planeación, la rapidez de ejecución y la atención para resolver todas las dudas durante el proceso.</p>
+                    <footer>
+                        <span class="review-date">Hace 1 año</span>
+                    </footer>
+                </article>
+
+                <!-- Reseña 4 -->
+                <article>
+                    <header>
+                        <h3>Omar Gonzalez</h3>
+                        <div aria-label="Calificación: 5 estrellas de 5">
+                            <span>★★★★★</span>
+                        </div>
+                    </header>
+                    <p>Excelente servicio, trabajo limpio, buena calidad y una relación costo-beneficio muy recomendable.</p>
+                    <footer>
+                        <span class="review-date">Hace 1 año</span>
+                    </footer>
+                </article>
+
+                <!-- Reseña 5 -->
+                <article>
+                    <header>
+                        <h3>Armando Navarro</h3>
+                        <div aria-label="Calificación: 5 estrellas de 5">
+                            <span>★★★★★</span>
+                        </div>
+                    </header>
+                    <p>Excelente atención. Se propusieron diferentes alternativas para la instalación considerando las necesidades específicas del proyecto y explicando cada opción con claridad.</p>
+                    <footer>
+                        <span class="review-date">Hace 1 año</span>
+                    </footer>
+                </article>
+
+                <!-- Reseña 6 -->
+                <article>
+                    <header>
+                        <h3>Estela Luna</h3>
+                        <div aria-label="Calificación: 5 estrellas de 5">
+                            <span>★★★★★</span>
+                        </div>
+                    </header>
+                    <p>Muy formales, puntuales y profesionales. Además brindaron recomendaciones útiles para el cuidado del equipo. Totalmente recomendados.</p>
+                    <footer>
+                        <span class="review-date">Hace 1 año</span>
+                    </footer>
+                </article>
             </div>
-        </header>
-
-        <p>
-            Gran servicio y precio justo. Muy recomendable.
-        </p>
-
-        <footer>
-           <span class="review-date">Hace 4 semanas</span>
-        </footer>
-    </article>
-
-    <article>
-        <header>
-            <h3>Tlaquepaque Ind</h3>
-            <div aria-label="Calificación: 5 estrellas de 5">
-                <span>★★★★★</span>
-            </div>
-        </header>
-
-        <p>
-            Muy buena atención, responsables, confiables y limpios en su trabajo. Resolvieron todas mis dudas y sin duda volvería a elegirlos para futuros proyectos.
-        </p>
-
-        <footer>
-            <span class="review-date">Hace un mes</span>
-        </footer>
-    </article>
-
-    <article>
-        <header>
-            <h3>Gero</h3>
-            <div aria-label="Calificación: 5 estrellas de 5">
-                <span>★★★★★</span>
-            </div>
-        </header>
-
-        <p>
-            Excelente trabajo en la instalación de cámaras de seguridad. Destacó la asesoría previa, la planeación, la rapidez de ejecución y la atención para resolver todas las dudas durante el proceso.
-        </p>
-
-        <footer>
-            <span class="review-date">Hace 1 año</span>
-        </footer>
-    </article>
-
-    <article>
-        <header>
-            <h3>Omar Gonzalez</h3>
-            <div aria-label="Calificación: 5 estrellas de 5">
-                <span>★★★★★</span>
-            </div>
-        </header>
-
-        <p>
-            Excelente servicio, trabajo limpio, buena calidad y una relación costo-beneficio muy recomendable.
-        </p>
-
-        <footer>
-           <span class="review-date">Hace 1 año</span>
-        </footer>
-    </article>
-
-    <article>
-        <header>
-            <h3>Armando Navarro</h3>
-            <div aria-label="Calificación: 5 estrellas de 5">
-                <span>★★★★★</span>
-            </div>
-        </header>
-
-        <p>
-            Excelente atención. Se propusieron diferentes alternativas para la instalación considerando las necesidades específicas del proyecto y explicando cada opción con claridad.
-        </p>
-
-        <footer>
-            <span class="review-date">Hace 1 año</span>
-        </footer>
-    </article>
-
-    <article>
-        <header>
-            <h3>Estela Luna</h3>
-            <div aria-label="Calificación: 5 estrellas de 5">
-                <span>★★★★★</span>
-            </div>
-        </header>
-
-        <p>
-            Muy formales, puntuales y profesionales. Además brindaron recomendaciones útiles para el cuidado del equipo. Totalmente recomendados.
-        </p>
-
-        <footer>
-           <span class="review-date">Hace 1 año</span>
-        </footer>
-    </article>
-
-</div>
-
         </section>
 
-      
-        <!-- SECCIÓN 5: CTA FINAL -->
-        <section id="cta-final">
-            <h2>Hablemos sobre la seguridad de tu empresa, negocio o casa.</h2>
-            <p>Nuestro equipo puede ayudarte a encontrar la solución adecuada para proteger lo que más te interesa, con atención y asesoría especializada.</p>
-            
-            <!-- CTA Final -->
-            <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20una%20soluci%C3%B3n%20de%20videovigilancia%20para%20mi%20negocio%20o%20casa." target="_blank" rel="noopener noreferrer" role="button">
-                Solicitar Asesoría
-            </a>
+        <!-- 8. PREGUNTAS FRECUENTES -->
+        <section id="preguntas-frecuentes">
+            <header>
+                <h2>Preguntas Frecuentes</h2>
+            </header>
 
-            <!-- Indicadores -->
-            <ul>
-                <li>✓ Atención rápida</li>
-                <li>✓ Cobertura en CDMX</li>
-            </ul>
+            <div class="faq-accordion">
+                <!-- FAQ 1 -->
+                <details class="faq-item">
+                    <summary>¿Puedo ver mis cámaras desde mi celular?</summary>
+                    <div class="faq-answer">
+                        Sí, totalmente. Configuramos tu sistema para que puedas monitorear en tiempo real y visualizar grabaciones anteriores a través de una aplicación segura instalada en tu smartphone o tablet, compatible con iOS and Android.
+                    </div>
+                </details>
+
+                <!-- FAQ 2 -->
+                <details class="faq-item">
+                    <summary>¿Instalan en toda la CDMX?</summary>
+                    <div class="faq-answer">
+                        Sí, contamos con cobertura completa en las 16 alcaldías de la Ciudad de México y algunas zonas del área metropolitana.
+                    </div>
+                </details>
+
+                <!-- FAQ 3 -->
+                <details class="faq-item">
+                    <summary>¿Ofrecen garantía?</summary>
+                    <div class="faq-answer">
+                        Por supuesto. Todos nuestros equipos instalados son nuevos, 100% originales de marcas líderes en el mercado y cuentan con garantía directa del fabricante. Adicionalmente, respaldamos nuestra mano de obra de instalación con soporte directo.
+                    </div>
+                </details>
+
+                <!-- FAQ 4 -->
+                <details class="faq-item">
+                    <summary>¿Realizan mantenimiento?</summary>
+                    <div class="faq-answer">
+                        Sí. Ofrecemos servicios inmediatos (fallas en cables, grabadores o fuentes de poder).
+                    </div>
+                </details>
+
+                <!-- FAQ 5 -->
+                <details class="faq-item">
+                    <summary>¿Pueden monitorear mi negocio?</summary>
+                    <div class="faq-answer">
+                        Sí, ofrecemos el servicio de monitoreo remoto especializado para detectar actividades fuera de protocolo, aperturas inusuales, robo hormiga o validación de procesos operativos clave.
+                    </div>
+                </details>
+
+                <!-- FAQ 6 -->
+                <details class="faq-item">
+                    <summary>¿Atienden empresas y hogares?</summary>
+                    <div class="faq-answer">
+                        Sí, nuestro principal enfoque son empresas y negocios, sin embargo también contamos con soluciones para hogares.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 9. CTA FINAL -->
+        <section id="cta-final">
+            <h2>Da el siguiente paso para proteger tu negocio o empresa</h2>
+            <p>Recibe una asesoría personalizada y descubre la solución ideal para tu negocio, sin compromiso.</p>
+            
+            <a href="https://wa.me/525552751350?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20una%20soluci%C3%B3n%20de%20videovigilancia%20para%20mi%20negocio%20o%20casa." target="_blank" rel="noopener noreferrer" class="btn-primary" role="button">
+                <img src="Assets/Logos/Logo Whats.svg" alt="" aria-hidden="true" style="width: 22px; height: 22px; vertical-align: middle;"> Solicitar Asesoría
+            </a>
         </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer>
-        
-        <!-- Columna 1 -->
         <section aria-label="Sobre FYMA CCTV">
-            <img src="Assets/Logos/FYMA-CCTV_logo-navbar_website.png" alt="FYMA CCTV Logo">
-            <p>Especialistas en soluciones de videovigilancia para negocios y hogares en CDMX.</p>
-            <!-- Redes Sociales -->
+            <img src="Assets/Log Logos/FYMA-CCTV_logo-navbar_website.png" alt="FYMA CCTV Logo">
+            <p>Tu aliado en videovigilancia.</p>
             <nav aria-label="Redes sociales">
                 <ul>
                     <li><a href="https://www.instagram.com/fyma_cctv/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
@@ -379,7 +564,6 @@
             </nav>
         </section>
 
-        <!-- Columna 2 -->
         <section aria-label="Nuestras soluciones">
             <h3>Soluciones</h3>
             <ul>
@@ -390,20 +574,17 @@
             </ul>
         </section>
 
-        <!-- Columna 3 -->
         <section aria-label="Contacto de soporte" id="contacto">
             <h3>Contacto</h3>
             <ul>
                 <li><a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
                 <li><a href="tel:+525552751350">Teléfono</a></li>
                 <li><a href="mailto:comercializadorafyma@gmail.com">comercializadorafyma@gmail.com</a></li>
-                <li>Cobertura: CDMX y Área Metropolitana</li>
             </ul>
         </section>
 
-        <!-- Columna 4 -->
         <section aria-label="Enlaces de información">
-            <h3>Información</h3>
+            <h3>Information</h3>
             <ul>
                 <li><a href="nosotros/index.html">Nosotros</a></li>
                 <li id="portal-instaladores"><a href="portal-instaladores/index.html">Portal Instaladores</a></li>
@@ -412,14 +593,29 @@
             </ul>
         </section>
 
-        <!-- Franja inferior -->
         <div>
             <hr>
             <p>© 2026 FYMA CCTV. Todos los derechos reservados.</p>
             <p>Desarrollado por MAIKCOL BAZ (:</p>
         </div>
-
     </footer>
+
+    <!-- Script de control responsivo para el acordeón de Soluciones en móviles -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const submenuTrigger = document.querySelector('.submenu-trigger');
+            if (submenuTrigger) {
+                submenuTrigger.addEventListener('click', function(e) {
+                    // Solo interceptar y actuar como acordeón en pantallas menores o iguales a 900px
+                    if (window.innerWidth <= 900) {
+                        e.preventDefault(); // Detener la redirección instantánea
+                        const parent = this.parentElement;
+                        parent.classList.toggle('open'); // Alternar clase para expandir/colapsar
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
