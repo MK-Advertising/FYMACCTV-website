@@ -856,7 +856,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
 #cta-final h2 { font-size: 3.25rem; margin-bottom: 24px; letter-spacing: -0.04em; }
 #cta-final p { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 48px; }
 
-/* 14. FOOTER CORPORATIVO (Sincronizado) */
+/* 14. FOOTER CORPORATIVO */
 body > footer {
     background-color: var(--primary-black);
     padding: 120px 80px 40px 80px;
@@ -867,7 +867,19 @@ body > footer {
     margin: 0 auto;
 }
 
-body > footer section[aria-label="Sobre FYMA CCTV"] { display: flex; flex-direction: column; gap: 24px; }
+body > footer section[aria-label="Sobre FYMA CCTV"] { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 24px; 
+}
+
+/* === AJUSTE DEL TAMAÑO DEL LOGO EN EL FOOTER === */
+body > footer section[aria-label="Sobre FYMA CCTV"] img { 
+    height: 32px; /* MODIFICA ESTE VALOR (ej. 32px, 40px, 48px, 60px) PARA CAMBIAR EL TAMAÑO DEL LOGO */
+    width: auto; 
+    align-self: flex-start;
+}
+
 body > footer h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 24px; }
 body > footer ul { display: flex; flex-direction: column; gap: 14px; color: var(--text-muted); }
 body > footer > div { grid-column: 1 / -1; text-align: center; margin-top: 60px; }
