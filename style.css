@@ -875,7 +875,7 @@ body > footer section[aria-label="Sobre FYMA CCTV"] {
 
 /* === AJUSTE DEL TAMAÑO DEL LOGO EN EL FOOTER === */
 body > footer section[aria-label="Sobre FYMA CCTV"] img { 
-    height: 32px; /* MODIFICA ESTE VALOR (ej. 32px, 40px, 48px, 60px) PARA CAMBIAR EL TAMAÑO DEL LOGO */
+    height: 43px; /* MODIFICA ESTE VALOR (ej. 32px, 40px, 48px, 60px) PARA CAMBIAR EL TAMAÑO DEL LOGO */
     width: auto; 
     align-self: flex-start;
 }
