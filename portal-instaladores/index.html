@@ -393,21 +393,68 @@
             letter-spacing: 0.05em;
         }
 
-        /* Ambient Glow naranja muy sutil para el carrusel de marcas */
+        /* Ambient Glow naranja ultra-luminoso integrado debajo del carrusel de logotipos */
+        /* Realizado puramente con capas de gradiente y blur sobre pseudoelementos, sin bordes rígidos ni box-shadow */
         .carousel-glow {
-            width: 80%;
-            max-width: 800px;
-            height: 24px;
-            background: radial-gradient(circle, rgba(217, 119, 6, 0.25) 0%, rgba(217, 119, 6, 0.04) 50%, rgba(217, 119, 6, 0) 80%);
-            filter: blur(12px);
-            margin: -5px auto 15px auto;
+            position: relative;
+            width: 90%;
+            max-width: 1000px;
+            height: 40px; /* Altura de la iluminación ambiental */
+            margin: 10px auto 25px auto;
             pointer-events: none;
+            overflow: visible;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Primera capa: Resplandor ambiental amplio y difuso de fondo */
+        .carousel-glow::before {
+            content: '';
+            position: absolute;
+            width: 75%;
+            height: 35px;
+            background: radial-gradient(ellipse at center, rgba(217, 119, 6, 0.35) 0%, rgba(217, 119, 6, 0.04) 60%, rgba(217, 119, 6, 0) 80%);
+            filter: blur(16px);
+            mix-blend-mode: screen;
+            z-index: 1;
+        }
+
+        /* Segunda capa: Línea horizontal anamórfica ultra-brillante (Lens Flare) */
+        .carousel-glow::after {
+            content: '';
+            position: absolute;
+            width: 95%;
+            height: 1px; /* Espesor de línea ultra fino similar a la referencia */
+            background: linear-gradient(to right, 
+                rgba(217, 119, 6, 0) 0%, 
+                rgba(217, 119, 6, 0.4) 15%, 
+                rgba(217, 119, 6, 0.95) 35%, 
+                rgba(255, 255, 255, 1) 50%, /* Centro blanco ultra-luminoso */
+                rgba(217, 119, 6, 0.95) 65%, 
+                rgba(217, 119, 6, 0.4) 85%, 
+                rgba(217, 119, 6, 0) 100%
+            );
+            filter: drop-shadow(0 0 4px rgba(217, 119, 6, 0.8)) drop-shadow(0 0 12px rgba(217, 119, 6, 0.5));
+            mix-blend-mode: screen;
+            z-index: 2;
+        }
+
+        /* Tercera capa: Núcleo esférico brillante de la iluminación central (Hotspot) */
+        .carousel-glow-core {
+            position: absolute;
+            width: 140px;
+            height: 10px;
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(217, 119, 6, 0.8) 35%, rgba(217, 119, 6, 0) 70%);
+            filter: blur(2px);
+            mix-blend-mode: screen;
+            z-index: 3;
         }
 
         .carousel-disclaimer {
             font-size: 0.8rem;
             color: rgba(142, 142, 147, 0.6);
-            margin-top: 20px;
+            margin-top: 15px;
             display: block;
         }
 
@@ -977,11 +1024,13 @@
                 </div>
             </div>
 
-            <!-- Resplandor/Iluminación trasera de las marcas -->
-            <div class="carousel-glow" style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60%; height: 1px; background: radial-gradient(circle, rgba(217,119,6,0.2) 0%, transparent 80%); pointer-events: none;"></div>
+            <!-- Resplandor/Iluminación trasera de las marcas (Centrado horizontalmente justo debajo de la pista) -->
+            <div class="carousel-glow">
+                <div class="carousel-glow-core"></div>
+            </div>
             
-            <!-- CORRECCIÓN UX: Resplandor sutil para dar volumen debajo de la franja -->
-            <div class="carousel-disclaimer" style="margin-top: 20px;">
+            <!-- Nota aclaratoria -->
+            <div class="carousel-disclaimer">
                 Las marcas mostradas pertenecen a sus respectivos propietarios y se utilizan únicamente para identificar los productos que comercializamos.
             </div>
         </section>
