@@ -571,7 +571,7 @@ body > header .header-actions-wrapper a[role="button"]:hover,
 #control-operativo {
     padding: 160px 80px;
     background-image: linear-gradient(135deg, rgba(18, 18, 18, 0.94) 0%, rgba(20, 33, 61, 0.88) 100%),
-    url('monitoreo-remoto-cdmx-fyma-cctv.jpeg');
+    url('/Assets/img/monitoreo-remoto-cdmx-fyma-cctv.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
