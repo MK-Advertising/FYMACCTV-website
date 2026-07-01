@@ -160,22 +160,38 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* 5. HERO DE PORTAL (Informativo, Directo y Orientado a Conversión) */
+        /* 5. HERO DE PORTAL (Composición Premium Stripe/Apple alineada a la izquierda) */
         .portal-hero {
             position: relative;
-            padding: 180px 24px 80px 24px;
-            background: radial-gradient(circle at top right, rgba(20, 33, 61, 0.25) 0%, rgba(18, 18, 18, 1) 70%);
+            padding: 180px 24px 100px 24px;
+            /* Máscaras de degradado para fusionar perfectamente la imagen con el fondo oscuro a la izquierda y abajo */
+            background-image: 
+                linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.95) 35%, rgba(18, 18, 18, 0.6) 60%, rgba(18, 18, 18, 0.1) 100%),
+                linear-gradient(to bottom, rgba(18, 18, 18, 0.1) 0%, rgba(18, 18, 18, 1) 100%),
+                url('https://i.pinimg.com/736x/e4/80/7c/e4807cf817c003ade3989ffdc3e50afb.jpg');
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
-            text-align: center;
+            align-items: center;
+            min-height: 85vh;
+        }
+
+        .hero-wrapper-inner {
+            max-width: var(--max-width-content);
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 680px;
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            text-align: left;
         }
 
         .hero-content h1 {
@@ -183,6 +199,7 @@
             line-height: 1.15;
             margin-bottom: 24px;
             letter-spacing: -0.03em;
+            text-align: left;
         }
 
         .hero-content .lead {
@@ -190,7 +207,8 @@
             color: var(--text-muted);
             line-height: 1.7;
             margin-bottom: 40px;
-            max-width: 750px;
+            max-width: 100%;
+            text-align: left;
         }
 
         /* Botones de acción duales */
@@ -198,7 +216,7 @@
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
             margin-bottom: 48px;
         }
 
@@ -294,6 +312,7 @@
             border-top: 1px solid var(--border-light);
             border-bottom: 1px solid var(--border-light);
             text-align: center;
+            position: relative;
         }
 
         .brands-carousel-container {
@@ -374,10 +393,21 @@
             letter-spacing: 0.05em;
         }
 
+        /* Ambient Glow naranja muy sutil para el carrusel de marcas */
+        .carousel-glow {
+            width: 80%;
+            max-width: 800px;
+            height: 24px;
+            background: radial-gradient(circle, rgba(217, 119, 6, 0.25) 0%, rgba(217, 119, 6, 0.04) 50%, rgba(217, 119, 6, 0) 80%);
+            filter: blur(12px);
+            margin: -5px auto 15px auto;
+            pointer-events: none;
+        }
+
         .carousel-disclaimer {
             font-size: 0.8rem;
             color: rgba(142, 142, 147, 0.6);
-            margin-top: 30px;
+            margin-top: 20px;
             display: block;
         }
 
@@ -544,14 +574,26 @@
             line-height: 1.4;
         }
 
-        /* 10. NUEVA SECCIÓN: CTA FINAL */
+        /* 10. NUEVA SECCIÓN: CTA FINAL (Con fondo texturizado y oscurecido para máxima legibilidad) */
         .portal-cta-final {
-            padding: 120px 24px;
-            background: radial-gradient(circle at bottom left, rgba(20, 33, 61, 0.2) 0%, rgba(18, 18, 18, 1) 80%);
+            padding: 140px 24px;
+            background-image: 
+                linear-gradient(rgba(18, 18, 18, 0.88) 0%, rgba(18, 18, 18, 0.94) 100%),
+                url('https://i.pinimg.com/736x/e4/80/7c/e4807cf817c003ade3989ffdc3e50afb.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll; /* Se cambia a scroll para mejor soporte móvil por defecto */
             border-top: 1px solid var(--border-light);
             display: flex;
             justify-content: center;
             text-align: center;
+        }
+
+        @media (min-width: 901px) {
+            .portal-cta-final {
+                background-attachment: fixed; /* Parallax sofisticado para escritorio */
+            }
         }
 
         .cta-final-content {
@@ -690,7 +732,12 @@
                 padding: 20px 40px;
             }
             .portal-hero {
-                padding: 160px 40px 60px 40px;
+                padding: 160px 40px 80px 40px;
+                /* Degradado de escritorio adaptado para resoluciones medias */
+                background-image: 
+                    linear-gradient(to right, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.95) 45%, rgba(18, 18, 18, 0.7) 70%, rgba(18, 18, 18, 0.2) 100%),
+                    linear-gradient(to bottom, rgba(18, 18, 18, 0.2) 0%, rgba(18, 18, 18, 1) 100%),
+                    url('https://i.pinimg.com/736x/e4/80/7c/e4807cf817c003ade3989ffdc3e50afb.jpg');
             }
             .hero-content h1 {
                 font-size: 2.85rem;
@@ -723,13 +770,32 @@
             }
             .portal-hero {
                 padding: 140px 20px 60px 20px;
+                /* Transición de degradado vertical para oscurecer todo el fondo y garantizar legibilidad en móviles */
+                background-image: 
+                    linear-gradient(to bottom, rgba(18, 18, 18, 0.85) 0%, rgba(18, 18, 18, 0.95) 60%, rgba(18, 18, 18, 1) 100%),
+                    url('https://i.pinimg.com/736x/e4/80/7c/e4807cf817c003ade3989ffdc3e50afb.jpg');
+                background-position: center center;
+                min-height: auto;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .hero-wrapper-inner {
+                justify-content: flex-start;
+            }
+            .hero-content {
+                align-items: flex-start;
+                text-align: left;
+                max-width: 100%;
             }
             .hero-content h1 {
                 font-size: 2.25rem;
                 letter-spacing: -0.02em;
+                text-align: left;
             }
             .hero-content .lead {
                 font-size: 1rem;
+                text-align: left;
             }
             .digital-notice-banner {
                 flex-direction: column;
@@ -739,6 +805,7 @@
             .action-container {
                 flex-direction: column;
                 width: 100%;
+                justify-content: flex-start;
             }
             .btn {
                 width: 100%;
@@ -754,6 +821,9 @@
             }
             body > footer section[aria-label="Sobre FYMA CCTV"] {
                 grid-column: auto;
+            }
+            .portal-cta-final {
+                padding: 100px 20px;
             }
             .portal-cta-final h2 {
                 font-size: 2rem;
@@ -775,20 +845,22 @@
         
         <!-- HERO DEL PORTAL -->
         <section class="portal-hero" aria-label="Presentación del portal para instaladores independientes">
-            <div class="hero-content">
-                <h1>El aliado de confianza para instaladores de CCTV</h1>
-                <p class="lead">
-                    Encuentra cámaras, grabadores, accesorios y herramientas con atención especializada para instaladores de la CDMX.
-                </p>
+            <div class="hero-wrapper-inner">
+                <div class="hero-content">
+                    <h1>El aliado de confianza para instaladores de CCTV</h1>
+                    <p class="lead">
+                        Encuentra cámaras, grabadores, accesorios y herramientas con atención especializada para instaladores de la CDMX.
+                    </p>
 
-                <!-- Acciones Rápidas -->
-                <div class="action-container">
-                    <a href="https://www.productos-info.com/tienda/fymacctv" class="btn btn-primary" role="button">
-                        Ir a Tienda en Línea
-                    </a>
-                    <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20soy%20instalador%20independiente%20y%20me%20gustar%C3%ADa%20conocer%20las%20promociones%20por%20WhatsApp." class="btn btn-secondary" role="button">
-                        Obtener promociones por WhatsApp
-                    </a>
+                    <!-- Acciones Rápidas -->
+                    <div class="action-container">
+                        <a href="https://www.productos-info.com/tienda/fymacctv" class="btn btn-primary" role="button">
+                            Ir a Tienda en Línea
+                        </a>
+                        <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20soy%20instalador%20independiente%20y%20me%20gustar%C3%ADa%20conocer%20las%20promociones%20por%20WhatsApp." class="btn btn-secondary" role="button">
+                            Obtener promociones por WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -904,12 +976,17 @@
 
                 </div>
             </div>
-            <span class="carousel-disclaimer">
+
+            <!-- Resplandor/Iluminación trasera de las marcas -->
+            <div class="carousel-glow" style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60%; height: 1px; background: radial-gradient(circle, rgba(217,119,6,0.2) 0%, transparent 80%); pointer-events: none;"></div>
+            
+            <!-- CORRECCIÓN UX: Resplandor sutil para dar volumen debajo de la franja -->
+            <div class="carousel-disclaimer" style="margin-top: 20px;">
                 Las marcas mostradas pertenecen a sus respectivos propietarios y se utilizan únicamente para identificar los productos que comercializamos.
-            </span>
+            </div>
         </section>
 
-        <!-- NUEVA SECCIÓN DE BENEFICIOS -->
+        <!-- SECCIÓN DE BENEFICIOS EXCLUSIVOS -->
         <section class="benefits-section" id="por-que-elegirnos" aria-label="Por qué comprar con FYMA CCTV">
             <div class="benefits-wrapper">
                 <header>
