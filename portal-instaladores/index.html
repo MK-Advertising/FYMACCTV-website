@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Instaladores</title>
+    <title>Portal de Instaladores - FYMA CCTV</title>
     <link rel="icon" type="image/x-icon" href="/Assets/Logos/FYMA-CCTV_favicon-48x48.ico">
     
     <!-- Meta SEO para B2B e Instaladores -->
@@ -160,7 +160,7 @@
             border-color: rgba(255, 255, 255, 0.2);
         }
 
-        /* 5. HERO DE PORTAL (Informativo y Directo) */
+        /* 5. HERO DE PORTAL (Informativo, Directo y Orientado a Conversión) */
         .portal-hero {
             position: relative;
             padding: 180px 24px 80px 24px;
@@ -176,15 +176,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-
-        .hero-content .eyebrow {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--orange-fyma);
-            margin-bottom: 20px;
         }
 
         .hero-content h1 {
@@ -221,6 +212,7 @@
             align-items: center;
             gap: 12px;
             transition: var(--transition-smooth);
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -251,7 +243,7 @@
             height: 20px;
         }
 
-        /* 6. BANNER DE CLARIDAD: 100% DIGITAL (Punto clave solicitado) */
+        /* 6. BANNER DE CLARIDAD: 100% DIGITAL (Optimizado con mejor Copy) */
         .digital-notice-banner {
             max-width: var(--max-width-content);
             margin: 0 auto 80px auto;
@@ -295,28 +287,122 @@
             color: var(--soft-white);
         }
 
-        /* 7. SECCIÓN: QUÉ OFRECEMOS (Grid de Equipamiento para Instaladores) */
-        .distribution-section {
+        /* 7. NUEVA SECCIÓN: CARRUSEL INFINITO DE MARCAS */
+        .brands-carousel-section {
             padding: 80px 24px;
             background-color: #161616;
             border-top: 1px solid var(--border-light);
             border-bottom: 1px solid var(--border-light);
-            display: flex;
-            justify-content: center;
+            text-align: center;
         }
 
-        .distribution-wrapper {
+        .brands-carousel-container {
+            max-width: var(--max-width-content);
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Degradados laterales para suavizar el scroll en los bordes */
+        .brands-carousel-container::before,
+        .brands-carousel-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 120px;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .brands-carousel-container::before {
+            left: 0;
+            background: linear-gradient(to right, #161616, transparent);
+        }
+
+        .brands-carousel-container::after {
+            right: 0;
+            background: linear-gradient(to left, #161616, transparent);
+        }
+
+        @keyframes infiniteScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .brands-track {
+            display: flex;
+            width: max-content;
+            animation: infiniteScroll 35s linear infinite;
+            padding: 20px 0;
+        }
+
+        .brands-track:hover {
+            animation-play-state: paused;
+        }
+
+        .brand-logo-item {
+            width: 180px;
+            margin: 0 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .brand-logo-item img {
+            max-height: 48px;
+            max-width: 140px;
+            object-fit: contain;
+            filter: grayscale(1) contrast(0.5) brightness(1.6);
+            opacity: 0.6;
+            transition: var(--transition-fast);
+        }
+
+        .brand-logo-item:hover img {
+            filter: none;
+            opacity: 1;
+        }
+
+        /* Respaldo de texto elegante si la imagen externa falla */
+        .fallback-brand-text {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .carousel-disclaimer {
+            font-size: 0.8rem;
+            color: rgba(142, 142, 147, 0.6);
+            margin-top: 30px;
+            display: block;
+        }
+
+        /* 8. NUEVA SECCIÓN: BENEFICIOS EXCLUSIVOS */
+        .benefits-section {
+            padding: 100px 24px;
+            background-color: var(--primary-black);
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .benefits-wrapper {
             max-width: var(--max-width-content);
             width: 100%;
         }
 
-        .distribution-grid {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
+            margin-top: 40px;
         }
 
-        .distribution-card {
+        .benefits-card {
             background-color: var(--graphite-gray);
             border: 1px solid var(--border-light);
             border-radius: 16px;
@@ -324,12 +410,12 @@
             transition: var(--transition-smooth);
         }
 
-        .distribution-card:hover {
+        .benefits-card:hover {
             border-color: var(--orange-fyma);
             transform: translateY(-5px);
         }
 
-        .distribution-card .card-num {
+        .benefits-card .card-num {
             font-family: var(--font-titles);
             font-size: 1.5rem;
             font-weight: 800;
@@ -338,22 +424,23 @@
             display: inline-block;
         }
 
-        .distribution-card h3 {
+        .benefits-card h3 {
             font-size: 1.25rem;
             margin-bottom: 16px;
         }
 
-        .distribution-card p {
+        .benefits-card p {
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.6;
         }
 
-        /* 8. SECCIÓN: DOS VÍAS DE ATENCIÓN (Tienda Online vs Ejecutivo) */
+        /* 9. SECCIÓN: DOS VÍAS DE ATENCIÓN */
         .purchase-paths-section {
             padding: 120px 24px;
             display: flex;
             justify-content: center;
+            background-color: #161616;
         }
 
         .paths-wrapper {
@@ -378,6 +465,11 @@
             justify-content: space-between;
             position: relative;
             overflow: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .path-box:hover {
+            border-color: rgba(255, 255, 255, 0.15);
         }
 
         .path-box::before {
@@ -392,6 +484,10 @@
 
         .path-box.highlighted::before {
             background-color: var(--orange-fyma);
+        }
+
+        .path-box.highlighted {
+            border-color: rgba(217, 119, 6, 0.2);
         }
 
         .path-box h3 {
@@ -410,7 +506,7 @@
             color: var(--text-muted);
             font-size: 1rem;
             line-height: 1.7;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .path-features {
@@ -439,7 +535,47 @@
             justify-content: center;
         }
 
-        /* 9. FOOTER CORPORATIVO (Consistente V3) */
+        .promo-disclaimer {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            display: block;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* 10. NUEVA SECCIÓN: CTA FINAL */
+        .portal-cta-final {
+            padding: 120px 24px;
+            background: radial-gradient(circle at bottom left, rgba(20, 33, 61, 0.2) 0%, rgba(18, 18, 18, 1) 80%);
+            border-top: 1px solid var(--border-light);
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cta-final-content {
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .portal-cta-final h2 {
+            font-size: 2.75rem;
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+        }
+
+        .portal-cta-final p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        /* 11. FOOTER CORPORATIVO (Consistente V3) */
         body > footer {
             background-color: var(--primary-black);
             border-top: 1px solid var(--border-light);
@@ -548,7 +684,7 @@
             margin: 0 12px;
         }
 
-        /* 10. MEDIA QUERIES (RESPONSIVO MÓVIL) */
+        /* 12. MEDIA QUERIES (RESPONSIVO MÓVIL) */
         @media (max-width: 1200px) {
             body > header {
                 padding: 20px 40px;
@@ -563,7 +699,7 @@
                 margin: 0 20px 80px 20px;
                 padding: 30px;
             }
-            .distribution-grid {
+            .benefits-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
@@ -619,6 +755,9 @@
             body > footer section[aria-label="Sobre FYMA CCTV"] {
                 grid-column: auto;
             }
+            .portal-cta-final h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -637,10 +776,9 @@
         <!-- HERO DEL PORTAL -->
         <section class="portal-hero" aria-label="Presentación del portal para instaladores independientes">
             <div class="hero-content">
-                <p class="eyebrow">Soluciones B2B</p>
-                <h1>El proveedor de confianza para instegradores</h1>
+                <h1>El aliado de confianza para instaladores de CCTV</h1>
                 <p class="lead">
-                    En FYMA CCTV proveemos todo lo necesario en equipos de videoseguridad. Respaldamos tu negocio con el inventario más confiable para tus proyectos.
+                    Encuentra cámaras, grabadores, accesorios y herramientas con atención especializada para instaladores de la CDMX.
                 </p>
 
                 <!-- Acciones Rápidas -->
@@ -648,8 +786,8 @@
                     <a href="https://www.productos-info.com/tienda/fymacctv" class="btn btn-primary" role="button">
                         Ir a Tienda en Línea
                     </a>
-                    <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20soy%20instalador%20independiente%20y%20me%20gustar%C3%ADa%20cotizar%20equipos%20con%20un%20ejecutivo." class="btn btn-secondary" role="button">
-                        Contactar un Ejecutivo
+                    <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20soy%20instalador%20independiente%20y%20me%20gustar%C3%ADa%20conocer%20las%20promociones%20por%20WhatsApp." class="btn btn-secondary" role="button">
+                        Obtener promociones por WhatsApp
                     </a>
                 </div>
             </div>
@@ -662,42 +800,143 @@
                     📦
                 </div>
                 <div>
-                    <h2>Operamos de manera 100% digital</h2>
+                    <h2>Operamos 100% en línea</h2>
                     <p>
-                        Para brindarte una atención más ágil y una entrega eficiente de tus productos, <strong>operamos exclusivamente como tienda en línea. No contamos con mostradores físicos ni puntos de venta presencial.</strong> Todo pedido se procesa en nuestra plataforma o mediante nuestros ejecutivos y se envia directamente por nuestro repartidor o por paquetería a tu domicilio, almacén u obra en CDMX y Área Metropolitana.
+                        Para ofrecer una atención más ágil y mejores tiempos de entrega, no contamos con sucursales ni punto de venta físico. <br><br>Todas las compras se realizan desde nuestra tienda en línea o con uno de nuestros ejecutivos, con entrega mediante paquetería o reparto local en CDMX y Área Metropolitana.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- VENTAJAS DEL PORTAFOLIO DE PRODUCTOS -->
-        <section class="distribution-section" id="ventajas" aria-label="Nuestras ventajas de equipamiento">
-            <div class="distribution-wrapper">
+        <!-- SECCIÓN DE MARCAS LÍDERES -->
+        <section class="brands-carousel-section" aria-label="Marcas líderes en videovigilancia con las que trabajamos">
+            <header>
+                <h2>Trabajamos con las marcas líderes en videovigilancia</h2>
+                <p>Encuentra equipos originales y accesorios de fabricantes reconocidos para desarrollar cualquier tipo de instalación.</p>
+            </header>
+
+            <div class="brands-carousel-container">
+                <div class="brands-track">
+                    
+                    <!-- Grupo 1 -->
+                    <div class="brand-logo-item">
+                        <img src="https://www.cyberpuerta.mx/out/brand-description/long-description/EPCOM/images/epcomlogo1.png" alt="EPCOM" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">EPCOM</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://www.tier4.com.mx/wp-content/uploads/2022/12/hikvision-logo.png" alt="Hikvision" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">Hikvision</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://i0.wp.com/tiendasecuone.com/wp-content/uploads/2021/06/HiLook-Hikvision-Logo.gif?fit=1000%2C338&ssl=1" alt="HiLook" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">HiLook</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcPMbm90sGDs73mBm1PvdlkRxPYhtZ0bTRbMQtjaiBQ&s=10" alt="EZVIZ" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">EZVIZ</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://www.vectorlogo.es/wp-content/uploads/2020/06/logo-vector-dahua-technology.jpg" alt="Dahua" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">Dahua</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://cdn11.bigcommerce.com/s-ffthdew890/images/stencil/500x250/c/logo%20saxx_1646433235__71264_1769462866.original.png" alt="SAXXON" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">SAXXON</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://5a376412ae.clvaw-cdnwnd.com/38d40d4e237c131d0432748bf4442b6b/200000294-c1028c1fcd/LINKEDPRO%20LOGO.png" alt="LinkedPRO" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">LinkedPRO</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Tp-Link_logo_2016.png" alt="TP-Link" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">TP-Link</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://1000marcas.net/wp-content/uploads/2021/05/Western-Digital-Logo-2004.png" alt="Western Digital" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">W.D.</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTk7EL25mls70vjn0YgRWK8W9yOJUZn3WKEordlSjwxg&s=10" alt="Seagate" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">Seagate</span>
+                    </div>
+
+                    <!-- Grupo 2 (Duplicado para lograr un efecto infinito impecable) -->
+                    <div class="brand-logo-item">
+                        <img src="https://www.cyberpuerta.mx/out/brand-description/long-description/EPCOM/images/epcomlogo1.png" alt="EPCOM" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">EPCOM</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://www.tier4.com.mx/wp-content/uploads/2022/12/hikvision-logo.png" alt="Hikvision" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">Hikvision</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://i0.wp.com/tiendasecuone.com/wp-content/uploads/2021/06/HiLook-Hikvision-Logo.gif?fit=1000%2C338&ssl=1" alt="HiLook" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">HiLook</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxcPMbm90sGDs73mBm1PvdlkRxPYhtZ0bTRbMQtjaiBQ&s=10" alt="EZVIZ" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">EZVIZ</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://www.vectorlogo.es/wp-content/uploads/2020/06/logo-vector-dahua-technology.jpg" alt="Dahua" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">Dahua</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://cdn11.bigcommerce.com/s-ffthdew890/images/stencil/500x250/c/logo%20saxx_1646433235__71264_1769462866.original.png" alt="SAXXON" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">SAXXON</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://5a376412ae.clvaw-cdnwnd.com/38d40d4e237c131d0432748bf4442b6b/200000294-c1028c1fcd/LINKEDPRO%20LOGO.png" alt="LinkedPRO" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">LinkedPRO</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Tp-Link_logo_2016.png" alt="TP-Link" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">TP-Link</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://1000marcas.net/wp-content/uploads/2021/05/Western-Digital-Logo-2004.png" alt="Western Digital" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">W.D.</span>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTk7EL25mls70vjn0YgRWK8W9yOJUZn3WKEordlSjwxg&s=10" alt="Seagate" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="fallback-brand-text" style="display:none;">Seagate</span>
+                    </div>
+
+                </div>
+            </div>
+            <span class="carousel-disclaimer">
+                Las marcas mostradas pertenecen a sus respectivos propietarios y se utilizan únicamente para identificar los productos que comercializamos.
+            </span>
+        </section>
+
+        <!-- NUEVA SECCIÓN DE BENEFICIOS -->
+        <section class="benefits-section" id="por-que-elegirnos" aria-label="Por qué comprar con FYMA CCTV">
+            <div class="benefits-wrapper">
                 <header>
-                    <h2>Todo en videoseguridad para tus proyectos</h2>
-                    <p>Encuentra en un solo lugar los equipos y accesorios que necesitas para cada instalación, con el respaldo y la atención que tu proyecto requiere.</p>
+                    <h2>¿Por qué comprar con FYMA CCTV?</h2>
+                    <p>Nos enfocamos en ser la solución integral y de máxima confianza para integradores de videovigilancia.</p>
                 </header>
 
-                <div class="distribution-grid">
+                <div class="benefits-grid">
                     <!-- Tarjeta 1 -->
-                    <article class="distribution-card">
+                    <article class="benefits-card">
                         <span class="card-num">01</span>
-                        <h3>Todo en un Solo Lugar</h3>
-                        <p>Accede a un catálogo de cámaras de seguridad (IP, análogas, WiFi), grabadores (DVR, NVR), discos duros optimizados, fuentes de poder y cableado estructurado.</p>
+                        <h3>Todo para una instalación</h3>
+                        <p>Encuentra cámaras, grabadores, cableado, almacenamiento, accesorios y herramientas para desarrollar cualquier proyecto de videovigilancia.</p>
                     </article>
 
                     <!-- Tarjeta 2 -->
-                    <article class="distribution-card">
+                    <article class="benefits-card">
                         <span class="card-num">02</span>
-                        <h3>Garantía Directa</h3>
-                        <p>Cada equipo provisto por FYMA CCTV cuenta con el respaldo oficial del fabricante y soporte preventivo para garantizar que tu cliente final reciba lo mejor.</p>
+                        <h3>Productos originales</h3>
+                        <p>Todos nuestros equipos son nuevos, originales y cuentan con garantía de 1 año por parte fabricante para brindarte mayor confianza en cada compra.</p>
                     </article>
 
                     <!-- Tarjeta 3 -->
-                    <article class="distribution-card">
+                    <article class="benefits-card">
                         <span class="card-num">03</span>
-                        <h3>Tu Aliado en Cada Instalación</h3>
-                        <p>Más que un proveedor, buscamos convertirnos en un aliado para instaladores y empresas de seguridad, ofreciendo asesoría especializada y soluciones para cada proyecto.</p>
+                        <h3>Atención especializada</h3>
+                        <p>Nuestro equipo te ayuda a seleccionar equipos compatibles y la mejor solución para cada instalación.</p>
                     </article>
                 </div>
             </div>
@@ -708,7 +947,7 @@
             <div class="paths-wrapper">
                 <header>
                     <h2>Elige cómo abastecer tus proyectos</h2>
-                    <p>Te ofrecemos dos alternativas de compra diseñadas para adaptase a tu ritmo de trabajo y al volumen de tus instalaciones.</p>
+                    <p>Te ofrecemos dos alternativas de compra diseñadas para adaptarse a tu ritmo de trabajo y al volumen de tus instalaciones.</p>
                 </header>
 
                 <div class="paths-grid">
@@ -716,12 +955,12 @@
                     <article class="path-box highlighted" id="tienda">
                         <div>
                             <h3><span>A.</span> Tienda en Línea</h3>
-                            <p>Abastécete con total autonomía las 24 horas del día. Compra tus productos con métodos de pago seguros.</p>
+                            <p>Ideal si ya sabes exactamente qué equipo necesitas.</p>
                             <ul class="path-features">
-                                <li>Consulta de stock en tiempo real</li>
-                                <li>Precios transparentes</li>
-                                <li>Envíos directos mediante paqueteria</li>
-                                <li>Historial de compras para control contable</li>
+                                <li>Compra disponible las 24 horas.</li>
+                                <li>Consulta disponibilidad de productos.</li>
+                                <li>Compra rápida y segura.</li>
+                                <li>Envío directo a domicilio.</li>
                             </ul>
                         </div>
                         <a href="https://www.productos-info.com/tienda/fymacctv" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
@@ -733,19 +972,44 @@
                     <article class="path-box" id="contacto-directo">
                         <div>
                             <h3><span>B.</span> Ejecutivo de Ventas</h3>
-                            <p>Requieres apoyo para seleccionar el equipo correcto? Un ejecutivo de ventas de FYMA CCTV te asiste de manera personalizada.</p>
+                            <p>Ideal si buscas el mejor precio o asesoría especializada.</p>
                             <ul class="path-features">
-                                <li>Levantamiento de pedidos por personal capacitado</li>
-                                <li>Asesoría de compatibilidad de equipos</li>
-                                <li>Cotizaciones formales y a tus necesidades</li>
-                                <li>Atención ágil mediante WhatsApp y llamadas</li>
+                                <li>Promociones exclusivas para instaladores.</li>
+                                <li>Descuentos por volumen.</li>
+                                <li>Cotizaciones personalizadas.</li>
+                                <li>Recomendación de equipos compatibles.</li>
+                                <li>Atención rápida por WhatsApp.</li>
                             </ul>
                         </div>
-                        <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20soy%20instalador%20independiente%20y%20me%20gustar%C3%ADa%20cotizar%20equipos%20con%20un%20ejecutivo." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" alt="" aria-hidden="true">
-                            Cotizar con un Ejecutivo
-                        </a>
+                        <div>
+                            <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20soy%20instalador%20independiente%20y%20me%20gustar%C3%ADa%20obtener%20promociones%20para%20instaladores." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" alt="" aria-hidden="true">
+                                Obtener promociones por WhatsApp
+                            </a>
+                            <span class="promo-disclaimer">
+                                Algunas promociones y descuentos están disponibles únicamente a través de nuestros ejecutivos de ventas.
+                            </span>
+                        </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: CTA FINAL -->
+        <section class="portal-cta-final" aria-label="Próximo proyecto">
+            <div class="cta-final-content">
+                <h2>¿Listo para tu próximo proyecto?</h2>
+                <p>
+                    Compra directamente en nuestra tienda o habla con uno de nuestros ejecutivos para conocer promociones, descuentos y recibir asesoría especializada para tu próxima instalación.
+                </p>
+                <div class="action-container" style="margin-bottom: 0;">
+                    <a href="https://www.productos-info.com/tienda/fymacctv" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Ir a la Tienda en Línea
+                    </a>
+                    <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20soy%20instalador%20independiente%20y%20me%20gustar%C3%ADa%20obtener%20promociones%20para%20mi%20proximo%20proyecto." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" alt="" aria-hidden="true">
+                        Obtener promociones por WhatsApp
+                    </a>
                 </div>
             </div>
         </section>
