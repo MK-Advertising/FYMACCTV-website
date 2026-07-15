@@ -2,539 +2,835 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FYMA CCTV - Optimización de Plataforma • Videovigilancia CDMX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Seguridad para Casas - FYMA CCTV</title>
     <link rel="icon" type="image/x-icon" href="/Assets/Logos/FYMA-CCTV_favicon-48x48.ico">
     
-    <!-- Meta SEO Optimizado para la Transición -->
-    <meta name="description" content="Estamos optimizando nuestra plataforma web para brindarte una mejor experiencia técnica. Nuestras operaciones de instalación, cotización y soporte de cámaras de seguridad en CDMX siguen 100% activas.">
-    <meta name="keywords" content="Cámaras de Seguridad, CCTV, Videovigilancia, Cámaras de seguridad CDMX, CCTV CDMX, Videovigilancia CDMX, Seguridad para negocios, Seguridad para casas">
+    <!-- Meta SEO Optimizado -->
+    <meta name="description" content="Protege a tu familia y mantén el control de tu hogar desde donde estés con soluciones de videovigilancia residencial de FYMA CCTV. Tu tranquilidad es primero.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.fymacctv.com/">
+    <link rel="canonical" href="https://www.fymacctv.com/soluciones/seguridad-para-casas">
 
     <!-- Open Graph (Redes Sociales) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="FYMA CCTV - Optimizando nuestra infraestructura digital">
-    <meta property="og:description" content="Estamos mejorando nuestra experiencia web. Cotizaciones, instalaciones y soporte técnico de CCTV siguen operando con normalidad. Contáctanos de inmediato.">
-    <meta property="og:url" content="https://fymacctv.com/">
-    <meta property="og:image" content="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFennGe8uU08hbaj3z0AbjOE0TwO_IrRAAU-1JqMYZ0fV456A6ZxvUZU5Q4YQhLzsdWnlXg_62ZN0U8K3Y3MvcZUC4l2AKzAlvav-jKk5rj1dHa1HBjRF6-wnSeSNZXr17UJ57_Fw=s680-w680-h510-rw">
+    <meta property="og:title" content="Seguridad para Casas - FYMA CCTV">
+    <meta property="og:description" content="Sistemas de videovigilancia residenciales y monitoreo para proteger lo que más quieres en CDMX y Área Metropolitana.">
+    <meta property="og:url" content="https://www.fymacctv.com/soluciones/seguridad-para-casas">
+    <meta property="og:image" content="https://www.fymacctv.com/Assets/Logos/FYMA-CCTV_logo-navbar_website.png">
 
-    <!-- Schema LocalBusiness -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "FYMA CCTV",
-      "image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFennGe8uU08hbaj3z0AbjOE0TwO_IrRAAU-1JqMYZ0fV456A6ZxvUZU5Q4YQhLzsdWnlXg_62ZN0U8K3Y3MvcZUC4l2AKzAlvav-jKk5rj1dHa1HBjRF6-wnSeSNZXr17UJ57_Fw=s680-w680-h510-rw",
-      "telephone": "+525552751350",
-      "email": "comercializadorafyma@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Ciudad de México",
-        "addressRegion": "CDMX",
-        "addressCountry": "MX"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "19.4326",
-        "longitude": "-99.1332"
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "CDMX y Área Metropolitana"
-      }
-    }
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración Custom de Tailwind para consistencia V3 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBlack: '#121212',
+                        graphiteGray: '#1E1E1E',
+                        softWhite: '#F5F5F5',
+                        orangeFyma: '#D97706',
+                    },
+                    fontFamily: {
+                        titles: ['Sora', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
     </script>
 
-    <!-- Integración CSS V3 con Ajustes Premium para Landing de Actualización -->
     <style>
-        /* 1. IMPORTS & SYSTEM FONTS */
+        /* Fuentes base */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap');
 
-        /* 2. DESIGN TOKENS (CSS VARIABLES - EXACTAMENTE TUS COLORES V3) */
-        :root {
-            --primary-black: #121212;
-            --graphite-gray: #1E1E1E;
-            --soft-white: #F5F5F5;
-            --orange-fyma: #D97706;
-            --technical-blue: #14213D;
-            
-            --pure-white: #FFFFFF;
-            --border-light: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(217, 119, 6, 0.4);
-            --text-muted: #8E8E93;
-            --overlay-dark: rgba(18, 18, 18, 0.75);
-            
-            --font-titles: 'Sora', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            
-            --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            --max-width-content: 1200px;
-        }
-
-        /* 3. GLOBAL RESET & BASE STYLES */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            background-color: var(--primary-black);
-            color: var(--soft-white);
-            font-size: 16px;
-        }
-
+        /* Normalizaciones generales del sistema de diseño V3 */
         body {
-            font-family: var(--font-body);
-            line-height: 1.6;
+            background-color: #121212;
+            color: #F5F5F5;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: var(--transition-fast);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
         }
 
         h1, h2, h3, h4 {
-            font-family: var(--font-titles);
-            color: var(--pure-white);
-            letter-spacing: -0.02em;
-            font-weight: 600;
+            font-family: 'Sora', sans-serif;
+            color: #FFFFFF;
         }
 
-        /* 4. HEADER PREMIUM (Glassmorphism con Estado del Sistema) */
+        /* Ocultar barra de desplazamiento */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE y Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* === CAPA DE FONDO DEL HERO CON IMAGEN RESIDENCIAL PREMIUM === */
+        /* Mezcla de degradado lineal y radial ultra oscuro para asegurar excelente legibilidad de los textos */
+        .hero-bg-overlay {
+            background-image: 
+                linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.70) 50%, rgba(18, 18, 18, 0.92) 100%),
+                linear-gradient(to bottom, rgba(18, 18, 18, 0.3) 0%, rgba(18, 18, 18, 0.98) 100%),
+                url('/Assets/img/camaras-seguridad-hero-casas.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Cabecera Responsiva Elástica Glassmorphism */
         body > header {
             position: fixed;
             top: 0;
             left: 0;
+            right: 0;
             width: 100%;
+            box-sizing: border-box;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 80px;
-            background-color: rgba(18, 18, 18, 0.80);
+            padding: 20px 5%;
+            background-color: rgba(18, 18, 18, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border-light);
-            transition: var(--transition-smooth);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        body > header .brand-logo img {
-            height: 36px;
-            width: auto;
-        }
-
-        /* Indicador de estado del sistema (OpenAI / Stripe style) */
-        body > header .status-badge {
-            font-family: var(--font-titles);
+        .btn-comentarios {
+            font-family: 'Sora', sans-serif;
             font-size: 0.8rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--orange-fyma);
-            background-color: rgba(217, 119, 6, 0.1);
-            border: 1px solid rgba(217, 119, 6, 0.2);
-            padding: 8px 18px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        body > header .status-badge .pulse-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--orange-fyma);
-            border-radius: 50%;
-            display: inline-block;
-            animation: pulse 2s infinite ease-in-out;
-        }
-
-        /* 5. MAIN HERO AREA (Actualización Tecnológica) */
-        main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 160px 80px 80px 80px;
-            background: radial-gradient(circle at top right, rgba(20, 33, 61, 0.35) 0%, rgba(18, 18, 18, 1) 75%);
-            position: relative;
-        }
-
-        .maintenance-container {
-            max-width: 850px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            z-index: 10;
-        }
-
-        .maintenance-container .eyebrow {
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--orange-fyma);
-            margin-bottom: 24px;
-        }
-
-        .maintenance-container h1 {
-            font-size: 3.5rem;
-            line-height: 1.15;
-            font-weight: 700;
-            margin-bottom: 24px;
-            letter-spacing: -0.03em;
-        }
-
-        .maintenance-container .description {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 40px;
-            max-width: 720px;
-        }
-
-        .maintenance-container .description strong {
-            color: var(--pure-white);
-            font-weight: 600;
-        }
-
-        /* Botón WhatsApp de Acción Directa (Sora Typography) */
-        .cta-button {
-            font-family: var(--font-titles);
-            font-size: 1rem;
-            font-weight: 600;
-            background-color: var(--orange-fyma);
-            color: var(--pure-white);
-            padding: 16px 36px;
-            border-radius: 30px;
-            box-shadow: 0 4px 20px rgba(217, 119, 6, 0.25);
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 64px;
-            transition: var(--transition-smooth);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
-        }
-
-        .cta-button img {
-            width: 24px;
-            height: 24px;
-        }
-
-        /* 6. OPERATIONAL SERVICES GRID (¿Qué sigue activo?) */
-        .services-header {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .services-header h2 {
-            font-size: 1.85rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .services-header p {
-            font-size: 1rem;
-            color: var(--text-muted);
-        }
-
-        .operational-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            width: 100%;
-            max-width: var(--max-width-content);
-            margin: 0 auto;
-        }
-
-        .operational-card {
-            background-color: var(--graphite-gray);
-            border: 1px solid var(--border-light);
-            border-radius: 16px;
-            padding: 32px;
-            text-align: left;
-            transition: var(--transition-smooth);
-        }
-
-        .operational-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--orange-fyma);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .operational-card .card-badge {
-            font-family: var(--font-titles);
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #10B981; /* Green Active Status */
-            background-color: rgba(16, 185, 129, 0.1);
-            padding: 4px 12px;
+            color: #8E8E93;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 6px 16px;
             border-radius: 20px;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            margin-bottom: 20px;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .operational-card .card-badge::before {
+        .btn-comentarios::before {
             content: '';
             width: 6px;
             height: 6px;
-            background-color: #10B981;
+            background-color: #D97706;
             border-radius: 50%;
             display: inline-block;
         }
 
-        .operational-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: var(--pure-white);
+        .btn-comentarios:hover {
+            color: #FFFFFF;
+            border-color: rgba(217, 119, 6, 0.4);
+            background-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 15px rgba(217, 119, 6, 0.15);
         }
 
-        .operational-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
+        /* Menú Hamburguesa Nativo */
+        .menu-checkbox {
+            display: none !important;
         }
 
-        /* 7. FOOTER REDUCIDO DE ALTA CONFIDENCIALIDAD */
-        body > footer {
-            background-color: var(--primary-black);
-            border-top: 1px solid var(--border-light);
-            padding: 48px 80px;
-            font-size: 0.9rem;
+        .hamburger-label {
+            display: none;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            z-index: 1020;
         }
 
-        body > footer .footer-container {
-            max-width: var(--max-width-content);
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .hamburger-label span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: #FFFFFF;
+            border-radius: 2px;
+            left: 0;
+            transform: rotate(0deg);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        body > footer .footer-left p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
+        .hamburger-label span:nth-child(1) { top: 0px; }
+        .hamburger-label span:nth-child(2) { top: 9px; }
+        .hamburger-label span:nth-child(3) { top: 18px; }
 
-        body > footer .footer-right {
-            display: flex;
-            gap: 32px;
-        }
-
-        body > footer .footer-right a {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        body > footer .footer-right a:hover {
-            color: var(--pure-white);
-        }
-
-        /* 8. ANIMACIONES */
-        @keyframes pulse {
-            0% {
-                transform: scale(0.9);
-                opacity: 0.5;
-            }
-            50% {
-                transform: scale(1.15);
-                opacity: 1;
-                box-shadow: 0 0 10px rgba(217, 119, 6, 0.5);
-            }
-            100% {
-                transform: scale(0.9);
-                opacity: 0.5;
-            }
-        }
-
-        /* 9. DESKTOP-FIRST RESPONSIVE MEDIA QUERIES */
-        @media (max-width: 1200px) {
+        @media (max-width: 1024px) {
             body > header {
-                padding: 20px 40px;
+                padding: 16px 24px;
             }
-            main {
-                padding: 140px 40px 60px 40px;
-            }
-            body > footer {
-                padding: 40px;
-            }
-        }
 
-        @media (max-width: 900px) {
-            .maintenance-container h1 {
-                font-size: 2.85rem;
+            .hamburger-label {
+                display: block;
             }
-            .operational-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
 
-        @media (max-width: 600px) {
-            body > header {
-                padding: 16px 20px;
+            body > header .header-actions-wrapper,
+            .btn-comentarios {
+                display: none !important;
             }
-            body > header .brand-logo img {
-                height: 28px;
-            }
-            body > header .status-badge {
-                font-size: 0.7rem;
-                padding: 6px 12px;
-            }
-            main {
-                padding: 120px 20px 40px 20px;
-            }
-            .maintenance-container .eyebrow {
-                font-size: 0.8rem;
-                margin-bottom: 16px;
-            }
-            .maintenance-container h1 {
-                font-size: 2.25rem;
-                letter-spacing: -0.02em;
-            }
-            .maintenance-container .description {
-                font-size: 1rem;
-            }
-            .cta-button {
+
+            body > header nav {
+                position: fixed;
+                top: 0;
+                left: 100%;
                 width: 100%;
+                height: 100vh;
+                background-color: rgba(18, 18, 18, 0.98);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                z-index: 1000;
+                display: flex;
+                align-items: center;
                 justify-content: center;
-                padding: 14px 28px;
-                font-size: 0.95rem;
+                visibility: hidden;
+                transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
             }
-            body > footer {
-                padding: 30px 20px;
+
+            .menu-checkbox:checked ~ nav {
+                left: 0;
+                visibility: visible;
             }
-            body > footer .footer-container {
+
+            body > header nav > ul {
                 flex-direction: column;
-                gap: 20px;
+                gap: 24px;
+                text-align: center;
+                width: 100%;
+                padding: 80px 24px 40px 24px;
+                overflow-y: auto;
+                max-height: 100vh;
+            }
+
+            body > header nav > ul > li > a {
+                font-size: 1.35rem;
+                font-family: 'Sora', sans-serif;
+                color: #8E8E93;
+                font-weight: 600;
+                padding: 8px 0;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+
+            /* Acordeón móvil */
+            body > header nav > ul > li ul {
+                position: static;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                box-shadow: none;
+                background-color: rgba(255, 255, 255, 0.02);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 12px;
+                padding: 8px;
+                min-width: 100%;
+                margin-top: 10px;
+                backdrop-filter: none;
+                display: none;
+                width: 100%;
+            }
+
+            body > header nav > ul > li.open ul {
+                display: block !important;
+            }
+
+            body > header nav > ul > li ul li a {
+                font-size: 1.05rem !important;
+                padding: 12px 16px !important;
+                color: #8E8E93 !important;
+                display: block;
                 text-align: center;
             }
-            body > footer .footer-right {
-                flex-direction: column;
-                gap: 12px;
-                align-items: center;
+
+            .menu-arrow {
+                display: inline-block;
+                margin-left: 8px;
+                font-size: 0.7rem;
+                transition: transform 0.3s ease;
             }
+
+            body > header nav > ul > li.open .menu-arrow {
+                transform: rotate(180deg);
+                color: #D97706;
+            }
+
+            .mobile-only-item {
+                display: block;
+                margin-top: 16px;
+            }
+
+            .btn-portal-mobile {
+                font-family: 'Sora', sans-serif;
+                font-size: 1.15rem !important;
+                font-weight: 600;
+                background-color: #D97706;
+                color: #FFFFFF !important;
+                padding: 12px 32px;
+                border-radius: 30px;
+                box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+                display: inline-flex !important;
+                align-items: center;
+                transition: all 0.25s ease;
+            }
+
+            .menu-checkbox:checked ~ .hamburger-label span:nth-child(1) {
+                transform: rotate(135deg);
+                top: 9px;
+            }
+            .menu-checkbox:checked ~ .hamburger-label span:nth-child(2) {
+                opacity: 0;
+                left: -20px;
+            }
+            .menu-checkbox:checked ~ .hamburger-label span:nth-child(3) {
+                transform: rotate(-135deg);
+                top: 9px;
+            }
+        }
+
+        /* Estilos del pie de página consistentes en cascada V3 */
+        body > footer {
+            background-color: #121212;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 100px 5% 40px 5%;
+        }
+
+        body > footer section[aria-label="Sobre FYMA CCTV"] nav ul li a {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            color: #8E8E93;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: all 0.25s ease;
+        }
+
+        body > footer section[aria-label="Sobre FYMA CCTV"] nav ul li a:hover {
+            color: #FFFFFF;
+            border-color: rgba(255, 255, 255, 0.25);
+            background-color: rgba(255, 255, 255, 0.02);
         }
     </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
 
-    <!-- HEADER MINIMALISTA DE ACTUALIZACIÓN -->
+    <!-- HEADER (Sticky Navigation) -->
     <header>
-       <a href="https://www.fymacctv.com/#inicio" class="brand-logo">
-    <img 
-        src="/Assets/Logos/FYMA-CCTV_logo-navbar_website.png"
-        alt="FYMA CCTV"
-    >
-</a>
+        <div class="logo-wrapper flex items-center gap-3">
+            <a href="https://www.fymacctv.com/" aria-label="FYMA CCTV Inicio">
+                <img src="/Assets/Logos/FYMA-CCTV_logo-navbar_website.png" alt="FYMA CCTV" class="h-8 w-auto">
+            </a>
+            <a href="/index.html#opiniones-clientes" class="btn-comentarios">Comentarios</a>
+        </div>
         
-        <!-- Indicador Técnico de Actualización Premium -->
-        <div class="status-badge" role="status">
-            <span class="pulse-dot"></span>
-            Actualización en Progreso
+        <!-- CONTROL DEL MENÚ POR CHECKBOX NATIVO -->
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        
+        <!-- BOTÓN GEOMÉTRICO HAMBURGUESA -->
+        <label for="menu-toggle" class="hamburger-label" aria-label="Abrir menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- NAVEGACIÓN PRINCIPAL OVERLAY -->
+        <nav aria-label="Menú principal" class="flex items-center shrink">
+            <ul class="flex items-center gap-8 lg:gap-10">
+                <li><a href="https://www.fymacctv.com/" class="text-sm font-medium text-[#8E8E93] hover:text-white transition-colors duration-200">Inicio</a></li>
+                <li class="has-submenu relative group">
+                    <a href="/index.html#que-necesitas-proteger" class="submenu-trigger text-sm font-medium text-[#8E8E93] hover:text-white flex items-center transition-colors duration-200" aria-haspopup="true" aria-expanded="false">
+                        Soluciones <span class="menu-arrow ml-1.5 text-[0.65rem] transition-transform duration-250 inline-block group-hover:rotate-180">▼</span>
+                    </a>
+                    <!-- Dropdown Soluciones -->
+                    <ul class="lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-4 lg:bg-[#1E1E1E] lg:border lg:border-white/8 lg:rounded-xl lg:p-4 lg:min-w-[280px] lg:opacity-0 lg:invisible lg:shadow-2xl lg:transition-all lg:duration-300 lg:backdrop-blur-md group-hover:lg:opacity-100 group-hover:lg:visible group-hover:lg:translate-y-2">
+                        <li class="block mb-1"><a href="/soluciones/seguridad-para-negocios" class="text-[0.85rem] font-normal text-[#8E8E93] p-2.5 rounded-lg block hover:text-white hover:bg-white/4 hover:pl-4 transition-all duration-250">Seguridad para Negocios</a></li>
+                        <li class="block mb-1"><a href="/soluciones/seguridad-para-casas" class="text-[0.85rem] font-normal text-white bg-white/4 p-2.5 rounded-lg block">Seguridad para Casas</a></li>
+                        <li class="block mb-1"><a href="/soluciones/mantenimiento-y-soporte" class="text-[0.85rem] font-normal text-[#8E8E93] p-2.5 rounded-lg block hover:text-white hover:bg-white/4 hover:pl-4 transition-all duration-250">Mantenimiento y Soporte Técnico</a></li>
+                        <li class="block mb-1"><a href="/soluciones/monitoreo" class="text-[0.85rem] font-normal text-[#8E8E93] p-2.5 rounded-lg block hover:text-white hover:bg-white/4 hover:pl-4 transition-all duration-250">Monitoreo Especializado</a></li>
+                    </ul>
+                </li>
+                <li><a href="/nosotros" class="text-sm font-medium text-[#8E8E93] hover:text-white transition-colors duration-200">Nosotros</a></li>
+                <li><a href="/contacto" class="text-sm font-medium text-[#8E8E93] hover:text-white transition-colors duration-200">Contacto</a></li>
+                <!-- Botón exclusivo para la versión móvil dentro de la hamburguesa -->
+                <li class="mobile-only-item hidden">
+                    <a href="/portal-instaladores" class="btn-portal-mobile" role="button">Portal Instaladores</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Botón de escritorio -->
+        <div class="header-actions-wrapper flex items-center gap-5 shrink-0 z-1010">
+            <a href="/portal-instaladores" role="button" class="font-titles text-[0.85rem] font-semibold bg-[#D97706] text-white py-2.5 px-5 rounded-full shadow-[0_4px_20px_rgba(217,119,6,0.2)] inline-flex items-center transition-all duration-250 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(217,119,6,0.35)] whitespace-nowrap">Portal Instaladores</a>
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
-        <div class="maintenance-container">
-            <p class="eyebrow">Plataforma en Optimización</p>
-            <h1>Estamos mejorando nuestro portal para protegerte mejor.</h1>
-            
-            <p class="description">
-                En FYMA CCTV valoramos el control operativo y la excelencia tecnológica. Estamos actualizando nuestra infraestructura digital para ofrecerte una experiencia en línea superior. 
-                <br><strong>Nuestros ingenieros de instalación, asesores comerciales y soporte técnico continúan operando al 100%</strong> de manera presencial en CDMX y Área Metropolitana.
-            </p>
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow pt-24">
 
-            <!-- Botón CTA WhatsApp Directo con tu número solicitado -->
-            <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV." 
-               class="cta-button" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               role="button">
-                <!-- Icono de WhatsApp con Fallback de Imagen Wikimedia Oficial -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/960px-WhatsApp.svg.png" alt="" aria-hidden="true">
-                Contactarnos por WhatsApp
-            </a>
-
-            <!-- Subtítulo de Servicios Operativos -->
-            <div class="services-header">
-                <h2>Nuestras operaciones siguen activas</h2>
-                <p>Nuestra infraestructura física y atención técnica operan sin interrupciones:</p>
+        <!-- 1. HERO SECTION -->
+        <section class="hero-bg-overlay relative min-h-[85vh] flex items-center justify-start px-6 sm:px-12 lg:px-24 py-20" aria-label="Introducción a la seguridad residencial">
+            <div class="max-w-4xl z-10 text-left">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    <span class="block md:whitespace-nowrap mb-2 sm:mb-4">La tranquilidad de saber</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-gray-400">que tu hogar está protegido.</span>                    
+                </h1>
+                <p class="text-gray-300 text-lg sm:text-xl font-light leading-relaxed mb-10 max-w-2xl">
+                    Supervisa tu casa en tiempo real, recibe alertas importantes y mantente cerca de quienes más quieres, estés donde estés.
+                </p>
+                <div class="flex flex-col sm:flex-row items-start gap-4">
+                    <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20quiero%20proteger%20mi%20hogar%2C%20requiero%20de%20un%20equipo%20de%20Videovigilancia%20residencial." 
+                       target="_blank" rel="noopener noreferrer" 
+                       class="w-full sm:w-auto font-titles text-sm font-semibold bg-[#D97706] text-white py-4 px-8 rounded-full shadow-[0_4px_20px_rgba(217,119,6,0.25)] flex items-center justify-center gap-3 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(217,119,6,0.4)]">
+                        Solicitar asesoría
+                    </a>
+                </div>
             </div>
+        </section>
 
-            <!-- Servicios que Siguen Operativos (Estructurados con Grid V3) -->
-            <div class="operational-grid">
-                
-                <!-- Tarjeta 1 -->
-                <article class="operational-card">
-                    <span class="card-badge">Activo</span>
-                    <h3>Proyectos e Instalaciones</h3>
-                    <p>Cotización, diseño e implementación de sistemas de videovigilancia y CCTV para negocios y residencias.</p>
+        <!-- 2. LAS PREOCUPACIONES EN EL HOGAR PUEDEN QUITARTE EL SUEÑO (HÍBRIDO RESPONSIVO) -->
+        <section class="px-6 sm:px-12 lg:px-24 py-28 max-w-7xl mx-auto" aria-labelledby="preocupaciones-heading">
+            <header class="text-center max-w-3xl mx-auto mb-16">
+                <h2 id="preocupaciones-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Hay situaciones que ocurren cuando menos lo esperas.
+                </h2>
+            </header>
+
+            <!-- Contenedor del Carrusel Desplazable (Móvil) / Grid Estructurado (Desktop) -->
+            <div class="flex overflow-x-auto gap-6 pt-4 pb-6 px-4 -mx-4 md:px-0 md:mx-0 snap-x snap-mandatory no-scrollbar md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible" style="scroll-behavior: smooth;">
+                <!-- Tarjeta 1: Saber quién entra y sale -->
+                <article class="snap-start shrink-0 w-[290px] sm:w-[320px] md:w-full bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 flex flex-col items-start hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-titles mb-3">Saber quién entra y sale</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Registra los accesos de familiares, visitas o prestadores de servicio con total control y claridad desde tu dispositivo móvil.
+                    </p>
                 </article>
 
-                <!-- Tarjeta 2 -->
-                <article class="operational-card">
-                    <span class="card-badge">Activo</span>
-                    <h3>Mantenimiento y Soporte</h3>
-                    <p>Atención técnica correctiva y preventiva inmediata para mantener tus cámaras de seguridad operando de manera óptima.</p>
+                <!-- Tarjeta 2: Recibir paquetería -->
+                <article class="snap-start shrink-0 w-[290px] sm:w-[320px] md:w-full bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 flex flex-col items-start hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <rect x="19" y="8" width="2" height="10" rx="1"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-titles mb-3">Recibir paquetería con tranquilidad</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Supervisa la entrega de tus compras en línea y mantente seguro de que tus paquetes se resguarden correctamente en el acceso.
+                    </p>
                 </article>
 
-                <!-- Tarjeta 3 -->
-                <article class="operational-card">
-                    <span class="card-badge">Activo</span>
-                    <h3>Soporte Comercial</h3>
-                    <p>Líneas de comunicación directa abiertas para resolver dudas operativas y ofrecer consultorías personalizadas.</p>
+                <!-- Tarjeta 3: Cuidar a quienes más quieres -->
+                <article class="snap-start shrink-0 w-[290px] sm:w-[320px] md:w-full bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 flex flex-col items-start hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-titles mb-3">Cuidar a quienes más quieres</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Monitorea las áreas comunes donde conviven tus hijos o adultos mayores para reaccionar inmediatamente ante cualquier incidente.
+                    </p>
                 </article>
 
+                <!-- Tarjeta 4: Estar al tanto de mascotas -->
+                <article class="snap-start shrink-0 w-[290px] sm:w-[320px] md:w-full bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 flex flex-col items-start hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-titles mb-3">Estar al tanto de tus mascotas</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Comprueba lo que hacen tus compañeros de cuatro patas durante el día, cuidando tu mobiliario y brindándote paz mental.
+                    </p>
+                </article>
+
+                <!-- Tarjeta 5: Contar con evidencia -->
+                <article class="snap-start shrink-0 w-[290px] sm:w-[320px] md:w-full bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 flex flex-col items-start hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-titles mb-3">Contar con evidencia cuando la necesites</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Grabaciones de alta calidad y almacenamiento continuo ante reclamos vecinales, entregas dudosas o cualquier imprevisto técnico.
+                    </p>
+                </article>
+
+                <!-- Tarjeta 6: Vigilar tu hogar de noche -->
+                <article class="snap-start shrink-0 w-[290px] sm:w-[320px] md:w-full bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 flex flex-col items-start hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white font-titles mb-3">Vigilar tu hogar durante la noche</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Duerme sin preocupaciones gracias a sistemas de visión nocturna de última generación capaces de capturar detalles finos a todo color.
+                    </p>
+                </article>
             </div>
-        </div>
+        </section>
+
+        <!-- 3. MÁS QUE CÁMARAS, UNA HERRAMIENTA PARA VIVIR MEJOR -->
+        <section class="bg-[#161616] py-28">
+            <div class="px-6 sm:px-12 lg:px-24 max-w-7xl mx-auto">
+                <header class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-6">
+                        Más que cámaras, tranquilidad para todos los días.
+                    </h2>
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Columna 1: Mayor control -->
+                    <div class="flex flex-col items-center text-center px-4">
+                        <div class="w-16 h-16 rounded-full bg-[#D97706]/10 flex items-center justify-center mb-6 text-[#D97706]">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="22" y1="12" x2="18" y2="12"></line>
+                                <line x1="6" y1="12" x2="2" y2="12"></line>
+                                <line x1="12" y1="6" x2="12" y2="2"></line>
+                                <line x1="12" y1="22" x2="12" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Siempre cerca de tu hogar</h3>
+                        <p class="text-gray-400 font-light leading-relaxed">
+                            Consulta tus cámaras en tiempo real desde tu celular, estés donde estés.
+                        </p>
+                    </div>
+
+                    <!-- Columna 2: Mayor seguridad -->
+                    <div class="flex flex-col items-center text-center px-4">
+                        <div class="w-16 h-16 rounded-full bg-[#D97706]/10 flex items-center justify-center mb-6 text-[#D97706]">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Protección continua</h3>
+                        <p class="text-gray-400 font-light leading-relaxed">
+                            Mantén vigilados los accesos y espacios importantes.
+                        </p>
+                    </div>
+
+                    <!-- Columna 3: Mayor tranquilidad -->
+                    <div class="flex flex-col items-center text-center px-4">
+                        <div class="w-16 h-16 rounded-full bg-[#D97706]/10 flex items-center justify-center mb-6 text-[#D97706]">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Tranquilidad diaria</h3>
+                        <p class="text-gray-400 font-light leading-relaxed">
+                            Vive con la confianza de saber que todo está bien 24/7.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SOLUCIONES PENSADAS PARA TU HOGAR -->
+        <section class="px-6 sm:px-12 lg:px-24 py-28 max-w-7xl mx-auto" aria-labelledby="soluciones-hogar-heading">
+            <header class="text-center max-w-3xl mx-auto mb-20">
+                <h2 id="soluciones-hogar-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
+                   Protección para cada espacio de tu hogar.
+                </h2>
+                <p class="text-gray-400 text-lg font-light leading-relaxed">
+                    Instalamos y configuramos el equipo adecuado para cada espacio de tu hogar
+                </p>
+            </header>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta 1: Acceso Principal -->
+                <article class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-titles">Acceso Principal</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">Conoce quién llega a tu hogar y supervisa visitas o entregas aunque no estés.</p>
+                </article>
+
+                <!-- Tarjeta 2: Perímetros y Pasillos -->
+                <article class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="3" x2="9" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-titles">Perímetros y Bardas</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">Mantén vigilados los límites de tu hogar para detectar cualquier actividad fuera de lo habitual.</p>
+                </article>
+
+                <!-- Tarjeta 3: Cocheras y Garajes -->
+                <article class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="22" height="18" rx="2" ry="2"></rect>
+                            <path d="M5 21V19h14v2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-titles">Cocheras y Portones</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">Protege tus vehículos y vigila las aperturas y cierres.</p>
+                </article>
+
+                <!-- Tarjeta 4: Patios y Jardines -->
+                <article class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                            <path d="M12 6v12M6 12h12"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-titles">Patios y Jardines</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">Mantén vigilados los espacios exteriores durante el día y la noche.</p>
+                </article>
+
+                <!-- Tarjeta 5: Personal doméstico -->
+                <article class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-titles">Personal doméstico</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">Ten mayor visibilidad de las actividades cotidianas dentro de tu hogar cuando no estés presente.</p>
+                </article>
+
+                <!-- Tarjeta 6: Segundas Residencias -->
+                <article class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-8 hover:border-[#D97706]/40 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#D97706]/5 transition-all duration-300">
+                    <div class="text-[#D97706] mb-6">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 font-titles">Segundas Residencias</h3>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">Vigila tu casa de fin de semana o descanso de forma constante a la distancia.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 5. LO QUE OBTIENES CON FYMA -->
+        <section class="px-6 sm:px-12 lg:px-24 py-28 max-w-7xl mx-auto" aria-labelledby="beneficios-heading">
+            <header class="text-center max-w-3xl mx-auto mb-20">
+                <h2 id="beneficios-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-6">
+                    Lo que obtienes con FYMA
+                </h2>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Beneficio 1 -->
+                <div class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-6 flex items-start gap-4 hover:border-[#D97706]/30 transition-all duration-300">
+                    <span class="text-[#D97706] bg-[#D97706]/10 p-2.5 rounded-full shrink-0">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white font-titles mb-1">Atención personalizada</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Diseñamos un proyecto a la medida de tus necesidades familiares y de tu presupuesto.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 2 -->
+                <div class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-6 flex items-start gap-4 hover:border-[#D97706]/30 transition-all duration-300">
+                    <span class="text-[#D97706] bg-[#D97706]/10 p-2.5 rounded-full shrink-0">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white font-titles mb-1">Instalación limpia</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Nuestros técnicos cuidan la estética de tu hogar, sin cables expuestos ni daños visibles.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 3 -->
+                <div class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-6 flex items-start gap-4 hover:border-[#D97706]/30 transition-all duration-300">
+                    <span class="text-[#D97706] bg-[#D97706]/10 p-2.5 rounded-full shrink-0">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white font-titles mb-1">Equipos confiables</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Tecnología de última generación con resoluciones Ultra HD y durabilidad garantizada.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 4 -->
+                <div class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-6 flex items-start gap-4 hover:border-[#D97706]/30 transition-all duration-300">
+                    <span class="text-[#D97706] bg-[#D97706]/10 p-2.5 rounded-full shrink-0">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white font-titles mb-1">Soporte y mantenimiento</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Revisiones constantes y soporte rápido para que tu sistema nunca deje de funcionar.</p>
+                    </div>
+                </div>
+
+                <!-- Beneficio 5 -->
+                <div class="bg-[#1E1E1E] border border-white/8 rounded-2xl p-6 flex items-start gap-4 hover:border-[#D97706]/30 transition-all duration-300">
+                    <span class="text-[#D97706] bg-[#D97706]/10 p-2.5 rounded-full shrink-0">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </span>
+                    <div>
+                        <h3 class="text-lg font-bold text-white font-titles mb-1">Acompañamiento continuo</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Te guiamos en el uso de la aplicación móvil para que siempre lleves el control absoluto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. NO SOLO PROTEGEMOS HOGARES. AYUDAMOS A QUE VIVAN CON MAYOR TRANQUILIDAD -->
+        <section class="bg-[#161616] py-28" aria-labelledby="emocional-heading">
+            <div class="px-6 sm:px-12 lg:px-24 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Imagen Emocional de Familia Tranquila -->
+                <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primaryBlack/60 to-transparent"></div>
+                    <img src="/Assets/img/banner-solcuiones-casa.jpg" 
+                         alt="Familia compartiendo tiempo en su hogar seguro y con total tranquilidad" 
+                         class="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+
+                <!-- Contenido -->
+                <div>
+                    <h2 id="emocional-heading" class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                        Porque proteger un hogar también es saber lo que ocurre dentro y fuera de él.
+                    </h2>
+                    <p class="text-gray-300 text-lg font-light leading-relaxed mb-6">
+                        Mantenerte al tanto de lo que sucede en tu hogar te permite cuidar a tu familia, reaccionar cuando sea necesario y disfrutar tu día con mayor tranquilidad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CTA FINAL (FONDO PREMIUM SUGERIDO Y MÁSCARA OSCURA) -->
+        <section class="relative px-6 sm:px-12 lg:px-24 py-32 text-center overflow-hidden" aria-label="Llamada a la acción final" style="background-image: linear-gradient(to bottom, rgba(18, 18, 18, 0.90), rgba(18, 18, 18, 0.95)), url('/Assets/img/camaras-seguridad-cta-casa.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <div class="max-w-3xl mx-auto relative z-10">
+                <h2 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Hablemos sobre la seguridad de tu hogar.
+                </h2>
+                <p class="text-gray-300 text-lg font-light leading-relaxed mb-10 max-w-xl mx-auto">
+                   Agenda una asesoría y diseñemos juntos la solución de videovigilancia que mejor se adapte a tu hogar.
+                </p>
+                <a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV%2C%20quiero%20solicitar%20asesor%C3%ADa%20sobre%20seguridad%20y%20monitoreo%20para%20mi%20casa." 
+                   target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex font-titles text-sm font-semibold bg-[#D97706] text-white py-4 px-10 rounded-full shadow-[0_4px_20px_rgba(217,119,6,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(217,119,6,0.45)]">
+                    Solicitar asesoría
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <!-- FOOTER PREMIUM CON FIRMA PERSONALIZADA -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <p>© 2026 FYMA CCTV. Todos los derechos reservados.</p>
-            </div>
-            <div class="footer-right">
-                <a href="#">Desarrollado por MAIKCOL BAZ (:</a>
+    <!-- FOOTER CORPORATIVO (ESTRICTO V3 - REPLICADO FIELMENTE SIN ENLACES RESALTADOS) -->
+    <footer class="w-full">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[60px] text-sm text-[#8E8E93]">
+            
+            <!-- Columna 1 -->
+            <section aria-label="Sobre FYMA CCTV" class="flex flex-col gap-6">
+                <img src="/Assets/Logos/FYMA-CCTV_logo-navbar_website.png" alt="FYMA CCTV Logo" class="h-8 w-auto self-start">
+                <p class="leading-relaxed max-w-[320px]">Especialistas en soluciones de videovigilancia.</p>
+                <!-- Redes Sociales -->
+                <nav aria-label="Redes sociales">
+                    <ul class="flex gap-4">
+                        <li><a href="https://www.instagram.com/fyma_cctv/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-200">INSTAGRAM</a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=100067073892114" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors duration-200">FACEBOOK</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Columna 2 -->
+            <section aria-label="Nuestras soluciones">
+                <h3 class="text-[0.85rem] font-semibold text-white uppercase tracking-[0.1em] mb-6 font-titles">Soluciones</h3>
+                <ul class="flex flex-col gap-3.5">
+                    <li><a href="/soluciones/seguridad-para-negocios" class="hover:text-white hover:pl-1 transition-all duration-250">Seguridad para Negocios</a></li>
+                    <li><a href="/soluciones/seguridad-para-casas" class="hover:text-white hover:pl-1 transition-all duration-250">Seguridad para Casas</a></li>
+                    <li><a href="/soluciones/monitoreo" class="hover:text-white hover:pl-1 transition-all duration-250">Monitoreo Especializado</a></li>
+                    <li><a href="/soluciones/mantenimiento-y-soporte" class="hover:text-white hover:pl-1 transition-all duration-250">Soporte Técnico</a></li>
+                </ul>
+            </section>
+
+            <!-- Columna 3 -->
+            <section aria-label="Contacto de soporte" class="flex flex-col">
+                <h3 class="text-[0.85rem] font-semibold text-white uppercase tracking-[0.1em] mb-6 font-titles">Contacto</h3>
+                <ul class="flex flex-col gap-3.5 mb-2.5">
+                    <li><a href="https://wa.me/525552751350?text=Hola%20FYMA%20CCTV" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:pl-1 transition-all duration-250">WhatsApp</a></li>
+                    <li><a href="tel:+525552751350" class="hover:text-white hover:pl-1 transition-all duration-250">Teléfono</a></li>
+                    <li><a href="mailto:comercializadorafyma@gmail.com" class="hover:text-white hover:pl-1 transition-all duration-250">comercializadorafyma@gmail.com</a></li>
+                </ul>
+            </section>
+
+            <!-- Columna 4 -->
+            <section aria-label="Enlaces de información">
+                <h3 class="text-[0.85rem] font-semibold text-white uppercase tracking-[0.1em] mb-6 font-titles">Información</h3>
+                <ul class="flex flex-col gap-3.5">
+                    <li><a href="/nosotros" class="hover:text-white hover:pl-1 transition-all duration-250">Nosotros</a></li>
+                    <li><a href="/portal-instaladores" class="hover:text-white hover:pl-1 transition-all duration-250">Portal Instaladores</a></li>
+                    <li><a href="/terminos-condiciones" class="hover:text-white hover:pl-1 transition-all duration-250">Términos y Condiciones</a></li>
+                    <li><a href="/aviso-privacidad" class="hover:text-white hover:pl-1 transition-all duration-250">Aviso de Privacidad</a></li>
+                </ul>
+            </section>
+
+            <!-- Franja inferior -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-4 text-center mt-[60px]">
+                <hr class="border-0 h-[1px] bg-white/8 mb-10">
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 text-[0.8rem] text-[#8E8E93]">
+                    <p>© 2026 FYMA CCTV. Todos los derechos reservados.</p>
+                    <p>Desarrollado por MAIKCOL BAZ (:</p>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Script de control responsivo para el acordeón de Soluciones en móviles -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const submenuTrigger = document.querySelector('.submenu-trigger');
+            if (submenuTrigger) {
+                submenuTrigger.addEventListener('click', function(e) {
+                    // Solo interceptar y actuar como acordeón en pantallas menores o iguales a 1024px (Breakpoint unificado)
+                    if (window.innerWidth <= 1024) {
+                        e.preventDefault(); // Detener la redirección instantánea
+                        const parent = this.parentElement;
+                        parent.classList.toggle('open'); // Alternar clase para expandir/colapsar
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
