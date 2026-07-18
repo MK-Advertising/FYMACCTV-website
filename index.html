@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>FYMA CCTV</title>
+    <title>FYMA CCTV - Tu aliado en videovigilancia</title>
     <link rel="icon" type="image/x-icon" href="Assets/Logos/FYMA-CCTV_favicon-48x48.ico">
     
     <!-- Meta SEO Optimizado -->
@@ -360,6 +360,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
+            transition: var(--transition-fast);
         }
 
         .btn-secondary {
@@ -835,6 +836,13 @@
 
         .review-date { font-size: 0.85rem; color: var(--text-muted); }
 
+        .reviews-cta-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 48px;
+            width: 100%;
+        }
+
         /* 12. SECCIÓN 8: PREGUNTAS FRECUENTES (Nativo CSS) */
         #preguntas-frecuentes {
             padding: 160px 80px;
@@ -1243,6 +1251,37 @@
                 transition: var(--transition-fast);
             }
 
+            .btn-comentarios-mobile {
+                font-family: var(--font-titles);
+                font-size: 1.15rem !important;
+                font-weight: 600;
+                background-color: rgba(255, 255, 255, 0.03);
+                border: 1px solid var(--border-light);
+                color: var(--soft-white) !important;
+                padding: 12px 32px;
+                border-radius: 30px;
+                display: inline-flex !important;
+                align-items: center;
+                gap: 8px;
+                transition: var(--transition-fast);
+            }
+
+            .btn-comentarios-mobile::before {
+                content: '';
+                width: 8px;
+                height: 8px;
+                background-color: var(--orange-fyma);
+                border-radius: 50%;
+                display: inline-block;
+            }
+
+            .btn-comentarios-mobile:hover {
+                color: var(--pure-white) !important;
+                border-color: rgba(217, 119, 6, 0.4);
+                background-color: rgba(255, 255, 255, 0.08);
+                box-shadow: 0 0 15px rgba(217, 119, 6, 0.15);
+            }
+
             .btn-portal-mobile:hover {
                 transform: scale(1.02);
                 box-shadow: 0 6px 20px rgba(217, 119, 6, 0.45);
@@ -1346,7 +1385,6 @@
             <span></span>
         </label>
 
-        <!-- NAVEGACIÓN PRINCIPAL OVERLAY -->
         <nav aria-label="Menú principal">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -1362,6 +1400,10 @@
                 </li>
                 <li><a href="nosotros">Nosotros</a></li>
                 <li><a href="/contacto">Contacto</a></li>
+                <!-- Botón de comentarios para la versión móvil dentro de la hamburguesa -->
+                <li class="mobile-only-item">
+                    <a href="/comentarios" class="btn-comentarios-mobile" role="button">Comentarios</a>
+                </li>
                 <!-- Botón exclusivo para la versión móvil dentro de la hamburguesa -->
                 <li class="mobile-only-item">
                     <a href="portal-instaladores" class="btn-portal-mobile" role="button">Portal Instaladores</a>
@@ -1749,6 +1791,16 @@
                     </footer>
                 </article>
             </div>
+
+            <!-- Botón Agregar comentario -->
+            <div class="reviews-cta-container">
+                <a href="/comentarios" class="btn-primary" role="button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; margin-right: 8px; vertical-align: middle;">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Agregar comentario
+                </a>
+            </div>
         </section>
 
         <!-- 8. PREGUNTAS FRECUENTES -->
@@ -1762,7 +1814,7 @@
                 <details class="faq-item">
                     <summary>¿Puedo ver mis cámaras desde mi celular?</summary>
                     <div class="faq-answer">
-                        Sí, totalmente. Configuramos tu sistema para que puedas monitorear en tiempo real y visualizar grabaciones anteriores a través de una aplicación segura instalada en tu smartphone o computadora, compatible con iOS y Android.
+                        Sí, totalmente. Configuramos tu sistema para que puedas monitorear en tiempo real y visualizar grabaciones anteriores a través de una aplicación segura instalada en tu smartphone o computadora, compatible con iOS and Android.
                     </div>
                 </details>
 
@@ -1836,10 +1888,10 @@
         <section aria-label="Nuestras soluciones">
             <h3>Soluciones</h3>
             <ul>
-                <li><a href="soluciones/seguridad-para-negocios">Seguridad para Negocios</a></li>
-                <li><a href="soluciones/seguridad-para-casas">Seguridad para Casas</a></li>
-                <li><a href="soluciones/monitoreo">Monitoreo Especializado</a></li>
-                <li><a href="soluciones/mantenimiento-y-soporte">Soporte Técnico</a></li>
+                <li><a href="/soluciones/seguridad-para-negocios">Seguridad para Negocios</a></li>
+                <li><a href="/soluciones/seguridad-para-casas">Seguridad para Casas</a></li>
+                <li><a href="/soluciones/monitoreo">Monitoreo Especializado</a></li>
+                <li><a href="/soluciones/mantenimiento-y-soporte">Soporte Técnico</a></li>
             </ul>
         </section>
 
@@ -1855,10 +1907,10 @@
         <section aria-label="Enlaces de información">
             <h3>Información</h3>
             <ul>
-                <li><a href="nosotros/index.html">Nosotros</a></li>
-                <li id="portal-instaladores"><a href="portal-instaladores">Portal Instaladores</a></li>
-                <li id="terminos"><a href="terminos-condiciones">Términos y Condiciones</a></li>
-                <li id="privacidad"><a href="aviso-privacidad">Aviso de Privacidad</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li id="/portal-instaladores"><a href="portal-instaladores">Portal Instaladores</a></li>
+                <li id="/terminos-condiciones"><a href="terminos-condiciones">Términos y Condiciones</a></li>
+                <li id="/aviso-privacidad"><a href="aviso-privacidad">Aviso de Privacidad</a></li>
             </ul>
         </section>
 
